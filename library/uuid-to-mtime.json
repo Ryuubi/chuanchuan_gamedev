@@ -364,39 +364,39 @@
     "meta": 1552286039617,
     "relativePath": "textures\\背景1.png"
   },
-  "42d5351c-f962-4931-a6ba-2b92f4aafd9f": {
-    "asset": 1552370324251,
-    "meta": 1552370326521,
-    "relativePath": "scripts\\Egg.js"
-  },
-  "a003e43b-a440-4e77-abc3-df59411caaf6": {
-    "asset": 1552370323232,
-    "meta": 1552370326552,
-    "relativePath": "scripts\\GreenJelly.js"
-  },
-  "8ea5ef16-02fc-4f6a-a212-9e801bc0fb8b": {
-    "asset": 1552370322239,
-    "meta": 1552370326567,
-    "relativePath": "scripts\\Orange2.js"
-  },
   "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
     "asset": 1552374784941,
     "meta": 1552374785288,
     "relativePath": "scripts\\Game.js"
   },
-  "0cacecec-732f-4fb6-8816-c916609b48bb": {
-    "asset": 1552376318128,
-    "meta": 1552376319006,
-    "relativePath": "scripts\\Spear.js"
-  },
-  "6b5b1c69-8927-47ef-88b8-90e9ba159847": {
-    "asset": 1552377462816,
-    "meta": 1552377494764,
-    "relativePath": "scripts\\BlueWater.js"
-  },
   "878914a7-0b33-43d8-8181-55ff71f65516": {
     "asset": 1552377498945,
     "meta": 1552377499825,
     "relativePath": "scripts\\Apple.js"
+  },
+  "a003e43b-a440-4e77-abc3-df59411caaf6": {
+    "asset": 1552380875995,
+    "meta": 1552380876411,
+    "relativePath": "scripts\\GreenJelly.js"
+  },
+  "8ea5ef16-02fc-4f6a-a212-9e801bc0fb8b": {
+    "asset": 1552380866026,
+    "meta": 1552380876420,
+    "relativePath": "scripts\\Orange2.js"
+  },
+  "42d5351c-f962-4931-a6ba-2b92f4aafd9f": {
+    "asset": 1552381062599,
+    "meta": 1552381064497,
+    "relativePath": "scripts\\Egg.js"
+  },
+  "0cacecec-732f-4fb6-8816-c916609b48bb": {
+    "asset": 1552381815531,
+    "meta": 1552381844940,
+    "relativePath": "scripts\\Spear.js"
+  },
+  "6b5b1c69-8927-47ef-88b8-90e9ba159847": {
+    "asset": 1552381880916,
+    "meta": 1552381881301,
+    "relativePath": "scripts\\BlueWater.js"
   }
 }

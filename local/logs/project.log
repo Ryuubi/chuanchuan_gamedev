@@ -1,82 +1,100 @@
-2019-03-12T06:11:10.386Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-12T06:11:11.482Z - normal: Initializing Asset Database
-2019-03-12T06:11:11.485Z - normal: checking language setting...
-2019-03-12T06:11:11.485Z - normal: Language: en
-2019-03-12T06:11:12.093Z - success: preview server running at http://localhost:7456
-2019-03-12T06:11:12.095Z - success: protocol editor-framework registered
-2019-03-12T06:11:12.095Z - success: protocol app registered
-2019-03-12T06:11:12.095Z - success: protocol theme registered
-2019-03-12T06:11:12.095Z - success: protocol packages registered
-2019-03-12T06:11:12.096Z - success: protocol uuid registerred
-2019-03-12T06:11:12.096Z - success: protocol db registerred
-2019-03-12T06:11:12.096Z - success: protocol thumbnail registerred
-2019-03-12T06:11:12.096Z - success: protocol unpack registerred
-2019-03-12T06:11:12.096Z - success: protocol disable-commonjs registerred
-2019-03-12T06:11:12.225Z - normal: connected!
-2019-03-12T06:11:12.228Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
-2019-03-12T06:11:12.234Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
-2019-03-12T06:11:12.884Z - normal: Initializing Cocos2d
-2019-03-12T06:11:13.540Z - normal: Initializing engine extends
-2019-03-12T06:11:13.557Z - success: asset-db-debugger loaded
-2019-03-12T06:11:13.558Z - success: code-editor loaded
-2019-03-12T06:11:13.559Z - success: color-picker loaded
-2019-03-12T06:11:13.635Z - success: fb-audience-network loaded
-2019-03-12T06:11:13.676Z - success: fb-live-stream loaded
-2019-03-12T06:11:13.678Z - success: google-play-instant loaded
-2019-03-12T06:11:13.683Z - success: huawei-runtime loaded
-2019-03-12T06:11:13.683Z - success: jsb-adapter loaded
-2019-03-12T06:11:13.686Z - success: oppo-runtime loaded
-2019-03-12T06:11:13.688Z - success: package-manager loaded
-2019-03-12T06:11:13.790Z - success: qqplay-adapter loaded
-2019-03-12T06:11:13.792Z - success: runtime-dev-tools loaded
-2019-03-12T06:11:13.795Z - success: sdkbox loaded
-2019-03-12T06:11:13.798Z - success: tester loaded
-2019-03-12T06:11:13.800Z - success: ui-grid loaded
-2019-03-12T06:11:13.801Z - success: ui-kit-preview-extra loaded
-2019-03-12T06:11:13.802Z - success: ui-kit-preview loaded
-2019-03-12T06:11:13.803Z - success: ui-kit loaded
-2019-03-12T06:11:13.804Z - success: ui-tree loaded
-2019-03-12T06:11:13.807Z - success: vivo-runtime loaded
-2019-03-12T06:11:13.807Z - success: weapp-adapter loaded
-2019-03-12T06:11:13.860Z - success: assets loaded
-2019-03-12T06:11:13.861Z - success: builder loaded
-2019-03-12T06:11:14.092Z - success: cocos-services loaded
-2019-03-12T06:11:14.094Z - success: console loaded
-2019-03-12T06:11:14.126Z - success: fb-instant-games loaded
-2019-03-12T06:11:14.128Z - success: google-instant-games loaded
-2019-03-12T06:11:14.132Z - success: hierarchy loaded
-2019-03-12T06:11:14.134Z - success: inspector loaded
-2019-03-12T06:11:14.134Z - success: keystore loaded
-2019-03-12T06:11:14.137Z - success: node-library loaded
-2019-03-12T06:11:14.138Z - success: package-asset loaded
-2019-03-12T06:11:14.138Z - success: preferences loaded
-2019-03-12T06:11:14.139Z - success: project-exporter loaded
-2019-03-12T06:11:14.140Z - success: project-importer loaded
-2019-03-12T06:11:14.141Z - success: project-settings loaded
-2019-03-12T06:11:14.144Z - success: scene loaded
-2019-03-12T06:11:14.146Z - success: simulator-debugger loaded
-2019-03-12T06:11:14.147Z - success: sprite-editor loaded
-2019-03-12T06:11:14.150Z - success: store loaded
-2019-03-12T06:11:14.152Z - success: timeline loaded
-2019-03-12T06:11:15.175Z - normal: Loading packages
-2019-03-12T06:11:15.180Z - normal: Watching packages
-2019-03-12T06:11:15.546Z - normal: Run Application
-2019-03-12T06:11:15.744Z - info: Cocos Services load base data!
-2019-03-12T06:59:09.261Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Spear.js, message: Compile error: SyntaxError: C:/Users/Administrator/Desktop/project_base/complete_project/complete_project/assets/scripts/Spear.js: Unexpected token (121:24)
-  119 |     goDown: function(){
-  120 | 
-> 121 |         if(this.node.x =)
-      |                         ^
-  122 |         var jumpDown = cc.moveBy(1.5, cc.v2(0, -this.MaxjumpHeight)).easing(cc.easeCubicActionIn());
-  123 |         return cc.repeatForever(jumpDown);
-  124 | 
+2019-03-12T08:06:48.132Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-12T08:06:49.265Z - normal: Initializing Asset Database
+2019-03-12T08:06:49.265Z - normal: checking language setting...
+2019-03-12T08:06:49.265Z - normal: Language: en
+2019-03-12T08:06:49.873Z - success: preview server running at http://localhost:7456
+2019-03-12T08:06:49.873Z - success: protocol editor-framework registered
+2019-03-12T08:06:49.873Z - success: protocol app registered
+2019-03-12T08:06:49.873Z - success: protocol theme registered
+2019-03-12T08:06:49.873Z - success: protocol packages registered
+2019-03-12T08:06:49.873Z - success: protocol uuid registerred
+2019-03-12T08:06:49.873Z - success: protocol db registerred
+2019-03-12T08:06:49.873Z - success: protocol thumbnail registerred
+2019-03-12T08:06:49.873Z - success: protocol unpack registerred
+2019-03-12T08:06:49.873Z - success: protocol disable-commonjs registerred
+2019-03-12T08:06:49.981Z - normal: connected!
+2019-03-12T08:06:49.981Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
+2019-03-12T08:06:49.981Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
+2019-03-12T08:06:50.518Z - normal: Initializing Cocos2d
+2019-03-12T08:06:51.165Z - normal: Initializing engine extends
+2019-03-12T08:06:51.196Z - success: asset-db-debugger loaded
+2019-03-12T08:06:51.196Z - success: code-editor loaded
+2019-03-12T08:06:51.196Z - success: color-picker loaded
+2019-03-12T08:06:51.312Z - success: fb-audience-network loaded
+2019-03-12T08:06:51.359Z - success: fb-live-stream loaded
+2019-03-12T08:06:51.362Z - success: google-play-instant loaded
+2019-03-12T08:06:51.366Z - success: huawei-runtime loaded
+2019-03-12T08:06:51.367Z - success: jsb-adapter loaded
+2019-03-12T08:06:51.370Z - success: oppo-runtime loaded
+2019-03-12T08:06:51.373Z - success: package-manager loaded
+2019-03-12T08:06:51.480Z - success: qqplay-adapter loaded
+2019-03-12T08:06:51.480Z - success: runtime-dev-tools loaded
+2019-03-12T08:06:51.480Z - success: sdkbox loaded
+2019-03-12T08:06:51.480Z - success: tester loaded
+2019-03-12T08:06:51.480Z - success: ui-grid loaded
+2019-03-12T08:06:51.495Z - success: ui-kit-preview-extra loaded
+2019-03-12T08:06:51.495Z - success: ui-kit-preview loaded
+2019-03-12T08:06:51.495Z - success: ui-kit loaded
+2019-03-12T08:06:51.495Z - success: ui-tree loaded
+2019-03-12T08:06:51.495Z - success: vivo-runtime loaded
+2019-03-12T08:06:51.495Z - success: weapp-adapter loaded
+2019-03-12T08:06:51.542Z - success: assets loaded
+2019-03-12T08:06:51.542Z - success: builder loaded
+2019-03-12T08:06:51.765Z - success: cocos-services loaded
+2019-03-12T08:06:51.765Z - success: console loaded
+2019-03-12T08:06:51.796Z - success: fb-instant-games loaded
+2019-03-12T08:06:51.796Z - success: google-instant-games loaded
+2019-03-12T08:06:51.796Z - success: hierarchy loaded
+2019-03-12T08:06:51.796Z - success: inspector loaded
+2019-03-12T08:06:51.796Z - success: keystore loaded
+2019-03-12T08:06:51.796Z - success: node-library loaded
+2019-03-12T08:06:51.796Z - success: package-asset loaded
+2019-03-12T08:06:51.796Z - success: preferences loaded
+2019-03-12T08:06:51.812Z - success: project-exporter loaded
+2019-03-12T08:06:51.812Z - success: project-importer loaded
+2019-03-12T08:06:51.812Z - success: project-settings loaded
+2019-03-12T08:06:51.812Z - success: scene loaded
+2019-03-12T08:06:51.812Z - success: simulator-debugger loaded
+2019-03-12T08:06:51.812Z - success: sprite-editor loaded
+2019-03-12T08:06:51.812Z - success: store loaded
+2019-03-12T08:06:51.812Z - success: timeline loaded
+2019-03-12T08:06:52.839Z - normal: Loading packages
+2019-03-12T08:06:52.839Z - normal: Watching packages
+2019-03-12T08:06:53.136Z - normal: Run Application
+2019-03-12T08:06:53.424Z - info: Cocos Services load base data!
+2019-03-12T08:24:41.708Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\BlueWater.js, message: Compile error: SyntaxError: C:/Users/Administrator/Desktop/project_base/complete_project/complete_project/assets/scripts/BlueWater.js: Unexpected token, expected , (192:8)
+  190 |             }
+  191 |         }
+> 192 |         return false;
+      |         ^
+  193 |     },
+  194 | 
+  195 |  
     at Parser.pp$5.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
     at Parser.pp.unexpected (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
-    at Parser.pp$3.parseExprAtom (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3750:12)
+    at Parser.pp.expect (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseObj (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3719:19)
     at Parser.pp$3.parseExprSubscripts (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
     at Parser.pp$3.parseMaybeUnary (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
     at Parser.pp$3.parseExprOps (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
     at Parser.pp$3.parseMaybeConditional (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
     at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
-    at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3367:23)
-    at Parser.pp$3.parseExpression (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3306:19)
+2019-03-12T08:28:15.827Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\BlueWater.js, message: Compile error: SyntaxError: C:/Users/Administrator/Desktop/project_base/complete_project/complete_project/assets/scripts/BlueWater.js: Unexpected token, expected , (184:8)
+  182 |             }
+  183 |         }
+> 184 |         return false;
+      |         ^
+  185 |     },
+  186 | 
+  187 |  
+    at Parser.pp$5.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseObj (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3719:19)
+    at Parser.pp$3.parseExprSubscripts (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)

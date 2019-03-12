@@ -115,7 +115,6 @@ cc.Class({
 
             count +=1;
             
-            console.log("First Fruit : " + Global.first)
             console.log("Count Number after Add : "+count)
 
             

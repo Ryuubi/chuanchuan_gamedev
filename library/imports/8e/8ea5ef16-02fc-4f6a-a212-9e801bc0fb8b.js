@@ -102,7 +102,6 @@ cc.Class({
 
             count += 1;
 
-            console.log("First Fruit : " + Global.first);
             console.log("Count Number after Add : " + count);
 
             if (arr[i] == last && count == 1 && Global.orangefirst == null) {

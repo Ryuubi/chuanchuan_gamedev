@@ -30,6 +30,7 @@ window.Global={
     orangefirst:null,
     orangesecond:null,
     orangethird:null,
+    replacementcount: 0,
 }
 var spear = cc.Class({
     extends: cc.Component,

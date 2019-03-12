@@ -94,6 +94,8 @@ cc.Class({
             if (arr[i] != last) {
                 last = arr[i];
                 count = 0;
+                console.log(arr[i] + "What is arr");
+                console.log(last + "What is arr");
 
                 console.log("Reset to 0 again");
             }
@@ -107,14 +109,32 @@ cc.Class({
             if (arr[i] == last && count == 1 && Global.eggfirst == null) {
 
                 Global.eggfirst = currentNode;
+                console.log(Global.waterfirst + "     checkwater1");
+                console.log(Global.watersecond + "     checkwater2");
+                console.log(Global.waterthird + "     checkwater3");
+                console.log(Global.eggfirst + "        check egg1");
+                console.log(Global.eggsecond + "        check egg2");
+                console.log(Global.eggthird + "        check egg3");
             }
 
             if (arr[i] == last && count == 2 && Global.eggsecond == null) {
 
                 Global.eggsecond = currentNode;
+                console.log(Global.waterfirst + "     checkwater1");
+                console.log(Global.watersecond + "     checkwater2");
+                console.log(Global.waterthird + "     checkwater3");
+                console.log(Global.eggfirst + "        check egg1");
+                console.log(Global.eggsecond + "        check egg2");
+                console.log(Global.eggthird + "        check egg3");
             }
             if (arr[i] == last && count == 3 && Global.eggthird == null) {
                 Global.eggthird = currentNode;
+                console.log(Global.waterfirst + "     checkwater1");
+                console.log(Global.watersecond + "     checkwater2");
+                console.log(Global.waterthird + "     checkwater3");
+                console.log(Global.eggfirst + "        check egg1");
+                console.log(Global.eggsecond + "        check egg2");
+                console.log(Global.eggthird + "        check egg3");
             }
 
             console.log("hasConsecutive orange", amount, count);

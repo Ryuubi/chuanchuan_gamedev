@@ -94,28 +94,65 @@ cc.Class({
             if (arr[i] != last) {
                 last = arr[i];
                 count = 0;
-
-                console.log("Reset to 0 again");
             }
 
             console.log("Count Number before Add : " + count);
 
             count += 1;
-
-            console.log("First Fruit : " + Global.first);
             console.log("Count Number after Add : " + count);
 
-            if (arr[i] == last && count == 1 && Global.waterfirst == null) {
+            if (arr[i] == last && count == 1 && Global.waterfirst != null) {
+                if (Global.waterfirst != currentNode && Global.replacementcount == 0) {
+                    Global.waterfirst = currentNode;
+                    Global.replacementcount = 1;
+                    console.log(Global.waterfirst + "     checkwater1");
+                    console.log(Global.watersecond + "     checkwater2");
+                    console.log(Global.waterthird + "     checkwater3");
+                    console.log(Global.eggfirst + "        check egg1");
+                    console.log(Global.eggsecond + "        check egg2");
+                    console.log(Global.eggthird + "        check egg3");
+                } else {
+                    console.log("Not replacing");
+                }
+            } else if (arr[i] == last && count == 1 && Global.waterfirst == null) {
 
                 Global.waterfirst = currentNode;
+                console.log(Global.waterfirst + "     checkwater1");
+                console.log(Global.watersecond + "     checkwater2");
+                console.log(Global.waterthird + "     checkwater3");
+                console.log(Global.eggfirst + "        check egg1");
+                console.log(Global.eggsecond + "        check egg2");
+                console.log(Global.eggthird + "        check egg3");
             }
+
+            // if(arr[i]== last && count == 1 && Global.waterfirst != null){
+            //     Global.waterfirst = null;
+
+
+            //     Global.waterfirst = currentNode;
+            //     console.log(Global.waterfirst+"     checkwater1firstlogalternate1");
+            //     console.log(Global.watersecond+"     checkwater2");
+            //     console.log(Global.waterthird+"     checkwater3")
+
+            // }
+
 
             if (arr[i] == last && count == 2 && Global.watersecond == null) {
 
                 Global.watersecond = currentNode;
+                console.log(Global.waterfirst + "     checkwater1");
+                console.log(Global.watersecond + "     checkwater2");
+                console.log(Global.waterthird + "     checkwater3");
+                console.log(Global.eggfirst + "        check egg1");
+                console.log(Global.eggsecond + "        check egg2");
+                console.log(Global.eggthird + "        check egg3");
             }
+
             if (arr[i] == last && count == 3 && Global.waterthird == null) {
                 Global.waterthird = currentNode;
+                console.log(Global.waterfirst + "     checkwater1");
+                console.log(Global.watersecond + "     checkwater2");
+                console.log(Global.waterthird + "     checkwater3");
             }
 
             console.log("hasConsecutive orange", amount, count);
@@ -133,8 +170,8 @@ cc.Class({
                 Global.waterfirst = null;
                 Global.watersecond = null;
                 Global.waterthird = null;
+                Global.replacementcount = 0;
 
-                console.log("hasConsecutive end orange", Global.arrayfood);
                 return true;
             }
         }

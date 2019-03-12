@@ -156,8 +156,6 @@ cc.Class({
                 Global.greenthird = null
 
 
-
-                console.log("hasConsecutive end orange", Global.arrayfood);
                 return true;
                 
             }
