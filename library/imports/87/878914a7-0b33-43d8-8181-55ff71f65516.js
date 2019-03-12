@@ -124,8 +124,11 @@ cc.Class({
                 Global.arrayfood.pop();
                 Global.arrayfood.pop();
                 Global.applefirst.destroy();
+                console.log("Destroy applefirst");
                 Global.applesecond.destroy();
+                console.log("Destroy applesecond");
                 Global.applethird.destroy();
+                console.log("Destroy applethird");
 
                 Global.applefirst = null;
                 Global.applesecond = null;

@@ -124,8 +124,11 @@ cc.Class({
                 Global.arrayfood.pop();
                 Global.arrayfood.pop();
                 Global.waterfirst.destroy();
+                console.log("Destroy waterfirst");
                 Global.watersecond.destroy();
+                console.log("Destroy watersecond");
                 Global.waterthird.destroy();
+                console.log("Destroy waterthird");
 
                 Global.waterfirst = null;
                 Global.watersecond = null;

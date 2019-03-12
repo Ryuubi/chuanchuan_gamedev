@@ -31,30 +31,33 @@ var Game = cc.Class({
     onLoad: function onLoad() {
         var _this = this;
 
-        // 获取地平面的 y 轴坐标
-        // this.groundY = this.ground.y + this.ground.height/2;
-        // 初始化计时器
-
-
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
             console.log("TOUCH_START");
             Global.reset = 0;
+
+            _this.spear.holdMoveAt();
 
             // this.schedule(function() {
             //     // Here `this` is referring to the component
             //     console.log(this.intervalSetting());
             // }, 1);
 
-            _this.callback = function () {
-                if (Global.count === 3 || Global.reset == 1) {
-                    // Cancel this timer at the sixth call-back
-                    this.unschedule(this.callback);
-                } else if (Global.count < 3 || Global.reset == 0) {
-                    this.spear.intervalSetting();
-                    console.log(Global.count);
-                }
-            };
-            _this.schedule(_this.callback, 0.5);
+            // this.callback = function () {
+            //     if (Global.count === 3 || Global.reset == 1) {
+            //         // Cancel this timer at the sixth call-back
+            //         this.unschedule(this.callback);
+
+            //     }
+            //     else if(Global.count < 3 || Global.reset == 0){
+            //         this.spear.intervalSetting();
+            //         console.log(Global.count);
+
+            //     }
+
+
+            // }
+            // this.schedule(this.callback, 0.5);
+
         }, this, true);
 
         this.node.on(cc.Node.EventType.TOUCH_MOVE, function () {
@@ -65,6 +68,8 @@ var Game = cc.Class({
             console.log("TOUCH_END");
             _this.spear.startMoveAt();
             _this.spear.resetCount();
+            _this.spear.stopMoveAt();
+            _this.spear.goDownAt();
         }, this, true);
 
         this.node.on(cc.Node.EventType.TOUCH_CANCEL, function () {

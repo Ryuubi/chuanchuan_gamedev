@@ -1,106 +1,82 @@
-2019-03-12T01:12:56.389Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-12T01:12:57.512Z - normal: Initializing Asset Database
-2019-03-12T01:12:57.512Z - normal: checking language setting...
-2019-03-12T01:12:57.512Z - normal: Language: en
-2019-03-12T01:12:58.027Z - success: preview server running at http://localhost:7456
-2019-03-12T01:12:58.027Z - success: protocol editor-framework registered
-2019-03-12T01:12:58.027Z - success: protocol app registered
-2019-03-12T01:12:58.027Z - success: protocol theme registered
-2019-03-12T01:12:58.027Z - success: protocol packages registered
-2019-03-12T01:12:58.027Z - success: protocol uuid registerred
-2019-03-12T01:12:58.027Z - success: protocol db registerred
-2019-03-12T01:12:58.027Z - success: protocol thumbnail registerred
-2019-03-12T01:12:58.027Z - success: protocol unpack registerred
-2019-03-12T01:12:58.027Z - success: protocol disable-commonjs registerred
-2019-03-12T01:12:58.152Z - normal: connected!
-2019-03-12T01:12:58.152Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
-2019-03-12T01:12:58.167Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
-2019-03-12T01:12:58.713Z - normal: Initializing Cocos2d
-2019-03-12T01:12:59.291Z - normal: Initializing engine extends
-2019-03-12T01:12:59.306Z - success: asset-db-debugger loaded
-2019-03-12T01:12:59.306Z - success: code-editor loaded
-2019-03-12T01:12:59.306Z - success: color-picker loaded
-2019-03-12T01:12:59.369Z - success: fb-audience-network loaded
-2019-03-12T01:12:59.415Z - success: fb-live-stream loaded
-2019-03-12T01:12:59.415Z - success: google-play-instant loaded
-2019-03-12T01:12:59.415Z - success: huawei-runtime loaded
-2019-03-12T01:12:59.415Z - success: jsb-adapter loaded
-2019-03-12T01:12:59.415Z - success: oppo-runtime loaded
-2019-03-12T01:12:59.415Z - success: package-manager loaded
-2019-03-12T01:12:59.509Z - success: qqplay-adapter loaded
-2019-03-12T01:12:59.509Z - success: runtime-dev-tools loaded
-2019-03-12T01:12:59.509Z - success: sdkbox loaded
-2019-03-12T01:12:59.509Z - success: tester loaded
-2019-03-12T01:12:59.509Z - success: ui-grid loaded
-2019-03-12T01:12:59.509Z - success: ui-kit-preview-extra loaded
-2019-03-12T01:12:59.509Z - success: ui-kit-preview loaded
-2019-03-12T01:12:59.509Z - success: ui-kit loaded
-2019-03-12T01:12:59.509Z - success: ui-tree loaded
-2019-03-12T01:12:59.525Z - success: vivo-runtime loaded
-2019-03-12T01:12:59.525Z - success: weapp-adapter loaded
-2019-03-12T01:12:59.571Z - success: assets loaded
-2019-03-12T01:12:59.571Z - success: builder loaded
-2019-03-12T01:12:59.774Z - success: cocos-services loaded
-2019-03-12T01:12:59.774Z - success: console loaded
-2019-03-12T01:12:59.805Z - success: fb-instant-games loaded
-2019-03-12T01:12:59.805Z - success: google-instant-games loaded
-2019-03-12T01:12:59.805Z - success: hierarchy loaded
-2019-03-12T01:12:59.805Z - success: inspector loaded
-2019-03-12T01:12:59.805Z - success: keystore loaded
-2019-03-12T01:12:59.805Z - success: node-library loaded
-2019-03-12T01:12:59.821Z - success: package-asset loaded
-2019-03-12T01:12:59.821Z - success: preferences loaded
-2019-03-12T01:12:59.821Z - success: project-exporter loaded
-2019-03-12T01:12:59.821Z - success: project-importer loaded
-2019-03-12T01:12:59.821Z - success: project-settings loaded
-2019-03-12T01:12:59.821Z - success: scene loaded
-2019-03-12T01:12:59.821Z - success: simulator-debugger loaded
-2019-03-12T01:12:59.821Z - success: sprite-editor loaded
-2019-03-12T01:12:59.837Z - success: store loaded
-2019-03-12T01:12:59.837Z - success: timeline loaded
-2019-03-12T01:13:00.842Z - normal: Loading packages
-2019-03-12T01:13:00.842Z - normal: Watching packages
-2019-03-12T01:13:01.185Z - normal: Run Application
-2019-03-12T01:13:01.339Z - info: Cocos Services load base data!
-2019-03-12T01:14:31.003Z - info: When the plugin script is loaded in the editor, those variables declared at the global scope with `var` will no longer be global variables. If you do not need to load the plugin in the editor, simply cancel "Load In Editor", or use "window.xx = yy;" instead to declare global variables. 😂
-path: "C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Game.js"
-line: "var Game = cc.Class({"
-2019-03-12T01:14:31.253Z - error: TypeError: require is not a function
-    at disable-commonjs://C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Game.js?001:2:16
-    at disable-commonjs://C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Game.js?001:255:3
-2019-03-12T01:14:45.837Z - error: TypeError: require is not a function
-    at disable-commonjs://C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Game.js?002:2:16
-    at disable-commonjs://C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Game.js?002:255:3
-2019-03-12T01:17:52.611Z - success: VS Code extension installed to C:\Users\Administrator\.vscode\extensions
-2019-03-12T01:17:55.730Z - success: API data generated and copied to C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\creator.d.ts
-2019-03-12T01:22:27.274Z - warn: Script attached to "Orange" is missing or invalid. Detailed information:
-Node path: "Canvas/Orange"
-Script UUID: "7c2693f2-baa5-4faa-930c-e037d42591fc"
-Class ID: "7c269PyuqVPqpMM4DfUJZH8"
-
-2019-03-12T01:22:27.276Z - warn: Script attached to "Orange" is missing or invalid. Detailed information:
-Node path: "Canvas/Orange"
-Script UUID: "7c2693f2-baa5-4faa-930c-e037d42591fc"
-Class ID: "7c269PyuqVPqpMM4DfUJZH8"
-
-2019-03-12T01:22:27.277Z - warn: Script attached to "Orange" is missing or invalid. Detailed information:
-Node path: "Canvas/Orange"
-Script UUID: "7c2693f2-baa5-4faa-930c-e037d42591fc"
-Class ID: "7c269PyuqVPqpMM4DfUJZH8"
-
-2019-03-12T01:22:27.396Z - warn: Script attached to "Orange" is missing or invalid. Detailed information:
-Node path: "Canvas/Orange"
-Script UUID: "7c2693f2-baa5-4faa-930c-e037d42591fc"
-Class ID: "7c269PyuqVPqpMM4DfUJZH8"
-
-2019-03-12T01:22:27.396Z - warn: Script attached to "Orange" is missing or invalid. Detailed information:
-Node path: "Canvas/Orange"
-Script UUID: "7c2693f2-baa5-4faa-930c-e037d42591fc"
-Class ID: "7c269PyuqVPqpMM4DfUJZH8"
-
-2019-03-12T01:22:27.396Z - warn: Script attached to "Orange" is missing or invalid. Detailed information:
-Node path: "Canvas/Orange"
-Script UUID: "7c2693f2-baa5-4faa-930c-e037d42591fc"
-Class ID: "7c269PyuqVPqpMM4DfUJZH8"
-
-2019-03-12T01:32:34.770Z - failed: [db-task][import] Can not import file C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Orange.js, already in the database
+2019-03-12T06:11:10.386Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-12T06:11:11.482Z - normal: Initializing Asset Database
+2019-03-12T06:11:11.485Z - normal: checking language setting...
+2019-03-12T06:11:11.485Z - normal: Language: en
+2019-03-12T06:11:12.093Z - success: preview server running at http://localhost:7456
+2019-03-12T06:11:12.095Z - success: protocol editor-framework registered
+2019-03-12T06:11:12.095Z - success: protocol app registered
+2019-03-12T06:11:12.095Z - success: protocol theme registered
+2019-03-12T06:11:12.095Z - success: protocol packages registered
+2019-03-12T06:11:12.096Z - success: protocol uuid registerred
+2019-03-12T06:11:12.096Z - success: protocol db registerred
+2019-03-12T06:11:12.096Z - success: protocol thumbnail registerred
+2019-03-12T06:11:12.096Z - success: protocol unpack registerred
+2019-03-12T06:11:12.096Z - success: protocol disable-commonjs registerred
+2019-03-12T06:11:12.225Z - normal: connected!
+2019-03-12T06:11:12.228Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
+2019-03-12T06:11:12.234Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\complete_project
+2019-03-12T06:11:12.884Z - normal: Initializing Cocos2d
+2019-03-12T06:11:13.540Z - normal: Initializing engine extends
+2019-03-12T06:11:13.557Z - success: asset-db-debugger loaded
+2019-03-12T06:11:13.558Z - success: code-editor loaded
+2019-03-12T06:11:13.559Z - success: color-picker loaded
+2019-03-12T06:11:13.635Z - success: fb-audience-network loaded
+2019-03-12T06:11:13.676Z - success: fb-live-stream loaded
+2019-03-12T06:11:13.678Z - success: google-play-instant loaded
+2019-03-12T06:11:13.683Z - success: huawei-runtime loaded
+2019-03-12T06:11:13.683Z - success: jsb-adapter loaded
+2019-03-12T06:11:13.686Z - success: oppo-runtime loaded
+2019-03-12T06:11:13.688Z - success: package-manager loaded
+2019-03-12T06:11:13.790Z - success: qqplay-adapter loaded
+2019-03-12T06:11:13.792Z - success: runtime-dev-tools loaded
+2019-03-12T06:11:13.795Z - success: sdkbox loaded
+2019-03-12T06:11:13.798Z - success: tester loaded
+2019-03-12T06:11:13.800Z - success: ui-grid loaded
+2019-03-12T06:11:13.801Z - success: ui-kit-preview-extra loaded
+2019-03-12T06:11:13.802Z - success: ui-kit-preview loaded
+2019-03-12T06:11:13.803Z - success: ui-kit loaded
+2019-03-12T06:11:13.804Z - success: ui-tree loaded
+2019-03-12T06:11:13.807Z - success: vivo-runtime loaded
+2019-03-12T06:11:13.807Z - success: weapp-adapter loaded
+2019-03-12T06:11:13.860Z - success: assets loaded
+2019-03-12T06:11:13.861Z - success: builder loaded
+2019-03-12T06:11:14.092Z - success: cocos-services loaded
+2019-03-12T06:11:14.094Z - success: console loaded
+2019-03-12T06:11:14.126Z - success: fb-instant-games loaded
+2019-03-12T06:11:14.128Z - success: google-instant-games loaded
+2019-03-12T06:11:14.132Z - success: hierarchy loaded
+2019-03-12T06:11:14.134Z - success: inspector loaded
+2019-03-12T06:11:14.134Z - success: keystore loaded
+2019-03-12T06:11:14.137Z - success: node-library loaded
+2019-03-12T06:11:14.138Z - success: package-asset loaded
+2019-03-12T06:11:14.138Z - success: preferences loaded
+2019-03-12T06:11:14.139Z - success: project-exporter loaded
+2019-03-12T06:11:14.140Z - success: project-importer loaded
+2019-03-12T06:11:14.141Z - success: project-settings loaded
+2019-03-12T06:11:14.144Z - success: scene loaded
+2019-03-12T06:11:14.146Z - success: simulator-debugger loaded
+2019-03-12T06:11:14.147Z - success: sprite-editor loaded
+2019-03-12T06:11:14.150Z - success: store loaded
+2019-03-12T06:11:14.152Z - success: timeline loaded
+2019-03-12T06:11:15.175Z - normal: Loading packages
+2019-03-12T06:11:15.180Z - normal: Watching packages
+2019-03-12T06:11:15.546Z - normal: Run Application
+2019-03-12T06:11:15.744Z - info: Cocos Services load base data!
+2019-03-12T06:59:09.261Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\complete_project\assets\scripts\Spear.js, message: Compile error: SyntaxError: C:/Users/Administrator/Desktop/project_base/complete_project/complete_project/assets/scripts/Spear.js: Unexpected token (121:24)
+  119 |     goDown: function(){
+  120 | 
+> 121 |         if(this.node.x =)
+      |                         ^
+  122 |         var jumpDown = cc.moveBy(1.5, cc.v2(0, -this.MaxjumpHeight)).easing(cc.easeCubicActionIn());
+  123 |         return cc.repeatForever(jumpDown);
+  124 | 
+    at Parser.pp$5.raise (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+    at Parser.pp$3.parseMaybeAssign (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3367:23)
+    at Parser.pp$3.parseExpression (C:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3306:19)

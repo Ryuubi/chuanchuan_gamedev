@@ -88,6 +88,48 @@ var spear = cc.Class({
 
     },
 
+    
+    holdMoveAt: function () {
+        this.enabled = true;
+        this.xSpeed = 0;
+        this.node.runAction(this.goUp());
+    },
+
+        
+    stopMoveAt: function () {
+        this.enabled = true;
+        this.xSpeed = 0;
+        this.node.stopAllActions();
+    },
+
+    goDownAt: function () {
+        this.enabled = true;
+        this.xSpeed = 0;
+        this.node.runAction(this.goDown());
+    },
+
+    goUp: function(){
+
+        var jumpUp = cc.moveBy(0.9, cc.v2(0, this.MaxjumpHeight)).easing(cc.easeCubicActionOut());
+        // return cc.repeat(cc.sequence(jumpUp,jumpDown),1);   
+        return cc.repeatForever(jumpUp);
+
+    },
+
+    goDown: function(){
+
+            var jumpDown = cc.moveTo(0.2, cc.v2(20, -311));
+            return cc.repeat(jumpDown,1);
+        
+
+
+
+    },
+
+
+
+
+
     setJumpAction: function () {
 
 

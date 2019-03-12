@@ -50,7 +50,7 @@
     "relativePath": "game.fire"
   },
   "51b0ea7f-a166-4130-bf0b-7f70fc60cb1d": {
-    "asset": 1552267253442,
+    "asset": 1552356680529,
     "meta": 1547722704000,
     "relativePath": "scripts"
   },
@@ -364,26 +364,6 @@
     "meta": 1552286039617,
     "relativePath": "textures\\背景1.png"
   },
-  "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
-    "asset": 1552357991909,
-    "meta": 1552358210728,
-    "relativePath": "scripts\\Game.js"
-  },
-  "0cacecec-732f-4fb6-8816-c916609b48bb": {
-    "asset": 1552370194292,
-    "meta": 1552370258219,
-    "relativePath": "scripts\\Spear.js"
-  },
-  "878914a7-0b33-43d8-8181-55ff71f65516": {
-    "asset": 1552370322832,
-    "meta": 1552370326443,
-    "relativePath": "scripts\\Apple.js"
-  },
-  "6b5b1c69-8927-47ef-88b8-90e9ba159847": {
-    "asset": 1552370323793,
-    "meta": 1552370326475,
-    "relativePath": "scripts\\BlueWater.js"
-  },
   "42d5351c-f962-4931-a6ba-2b92f4aafd9f": {
     "asset": 1552370324251,
     "meta": 1552370326521,
@@ -398,5 +378,25 @@
     "asset": 1552370322239,
     "meta": 1552370326567,
     "relativePath": "scripts\\Orange2.js"
+  },
+  "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
+    "asset": 1552374784941,
+    "meta": 1552374785288,
+    "relativePath": "scripts\\Game.js"
+  },
+  "0cacecec-732f-4fb6-8816-c916609b48bb": {
+    "asset": 1552376318128,
+    "meta": 1552376319006,
+    "relativePath": "scripts\\Spear.js"
+  },
+  "6b5b1c69-8927-47ef-88b8-90e9ba159847": {
+    "asset": 1552377462816,
+    "meta": 1552377494764,
+    "relativePath": "scripts\\BlueWater.js"
+  },
+  "878914a7-0b33-43d8-8181-55ff71f65516": {
+    "asset": 1552377498945,
+    "meta": 1552377499825,
+    "relativePath": "scripts\\Apple.js"
   }
 }

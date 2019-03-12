@@ -25,37 +25,40 @@ var Game = cc.Class({
     },
 
     onLoad: function () {
-        // 获取地平面的 y 轴坐标
-        // this.groundY = this.ground.y + this.ground.height/2;
-        // 初始化计时器
+
     
 
         this.node.on(cc.Node.EventType.TOUCH_START, () => { 
             console.log("TOUCH_START")
             Global.reset = 0;
+
+            this.spear.holdMoveAt();
+            
+
     
                 // this.schedule(function() {
                 //     // Here `this` is referring to the component
                 //     console.log(this.intervalSetting());
                 // }, 1);
 
-                this.callback = function () {
-                    if (Global.count === 3 || Global.reset == 1) {
-                        // Cancel this timer at the sixth call-back
-                        this.unschedule(this.callback);
+                // this.callback = function () {
+                //     if (Global.count === 3 || Global.reset == 1) {
+                //         // Cancel this timer at the sixth call-back
+                //         this.unschedule(this.callback);
 
-                    }
-                    else if(Global.count < 3 || Global.reset == 0){
-                        this.spear.intervalSetting();
-                        console.log(Global.count);
+                //     }
+                //     else if(Global.count < 3 || Global.reset == 0){
+                //         this.spear.intervalSetting();
+                //         console.log(Global.count);
 
-                    }
+                //     }
 
 
                     
                 
-                }
-                this.schedule(this.callback, 0.5);
+                // }
+                // this.schedule(this.callback, 0.5);
+
             
 
 
@@ -71,6 +74,8 @@ var Game = cc.Class({
             console.log("TOUCH_END");
             this.spear.startMoveAt();
             this.spear.resetCount();
+            this.spear.stopMoveAt();
+            this.spear.goDownAt();
 
         }, this, true);
 
