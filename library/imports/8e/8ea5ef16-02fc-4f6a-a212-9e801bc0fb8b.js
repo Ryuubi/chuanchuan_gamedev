@@ -1,6 +1,6 @@
 "use strict";
-cc._RF.push(module, '7c269PyuqVPqpMM4DfUJZH8', 'Orange');
-// scripts/Orange.js
+cc._RF.push(module, '8ea5e8WAvxPaqISnoAbwPuL', 'Orange2');
+// scripts/Orange2.js
 
 "use strict";
 
@@ -25,10 +25,23 @@ cc.Class({
     onLoad: function onLoad() {
 
         cc.director.getCollisionManager().enabled = true;
+        var actionBy = this.rotateFood();
+        this.node.runAction(actionBy);
+    },
+
+    rotateFood: function rotateFood() {
+        var sactionBy = cc.rotateBy(1, 90);
+        return cc.repeatForever(sactionBy);
+    },
+
+    realign: function realign() {
+        this.node.anchorX = 0.5;
+        this.node.anchorY = 0.5;
     },
 
     onCollisionEnter: function onCollisionEnter(other, self) {
         console.log('hit');
+        this.node.stopAllActions();
 
         if (Global.arrayfood.length == 6) {
             Global.arrayfood.slice(0, 5);
@@ -37,35 +50,87 @@ cc.Class({
         } else if (Global.arrayfood.length == 0 && this.node.y > 100) {
             Global.arrayfood.push("Orange");
             console.log(Global.arrayfood);
-            this.node.setPosition(339, -100);
+            this.realign();
+            this.node.setPosition(19, -350);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
         } else if (Global.arrayfood.length == 1 && this.node.y > 100) {
             Global.arrayfood.push("Orange");
             console.log(Global.arrayfood);
-            this.node.setPosition(339, -50);
+            this.realign();
+            this.node.setPosition(19, -300);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
         } else if (Global.arrayfood.length == 2 && this.node.y > 100) {
             Global.arrayfood.push("Orange");
             console.log(Global.arrayfood);
-            this.node.setPosition(339, 0);
+            this.realign();
+            this.node.setPosition(19, -250);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 3 && this.node.y > 100) {
+            Global.arrayfood.push("Orange");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -200);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 4 && this.node.y > 100) {
+            Global.arrayfood.push("Orange");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -150);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 5 && this.node.y > 100) {
+            Global.arrayfood.push("Orange");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -100);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
         }
     },
 
     hasConsecutive: function hasConsecutive(arr, amount) {
         var last = null;
+        var currentNode = this.node;
         var count = 0;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] != last) {
                 last = arr[i];
                 count = 0;
+
+                console.log("Reset to 0 again");
             }
+
+            console.log("Count Number before Add : " + count);
+
             count += 1;
+
+            console.log("First Fruit : " + Global.first);
+            console.log("Count Number after Add : " + count);
+
+            if (arr[i] == last && count == 1 && Global.orangefirst == null) {
+
+                Global.orangefirst = currentNode;
+            }
+
+            if (arr[i] == last && count == 2 && Global.orangesecond == null) {
+
+                Global.orangesecond = currentNode;
+            }
+            if (arr[i] == last && count == 3 && Global.orangethird == null) {
+                Global.orangethird = currentNode;
+            }
+
             console.log("hasConsecutive orange", amount, count);
             if (amount <= count) {
                 Global.arrayfood.pop();
                 Global.arrayfood.pop();
                 Global.arrayfood.pop();
+                Global.orangefirst.destroy();
+                Global.orangesecond.destroy();
+                Global.orangethird.destroy();
+
+                Global.orangefirst = null;
+                Global.orangesecond = null;
+                Global.orangethird = null;
+
                 console.log("hasConsecutive end orange", Global.arrayfood);
                 return true;
             }

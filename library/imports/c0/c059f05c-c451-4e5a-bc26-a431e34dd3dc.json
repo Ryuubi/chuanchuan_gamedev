@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "竹签",
+    "texture": "ffc9ecdd-b0da-4815-beab-4018a550677c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      15,
+      302
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      15,
+      302
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -11,7 +11,25 @@
 window.Global={
     count: 0 ,
     reset: 0,
-    arrayfood: []
+    arrayfood: [],
+    first:null,
+    second:null,
+    third:null,
+    waterfirst:null,
+    watersecond:null,
+    waterthird:null,
+    eggfirst:null,
+    eggsecond:null,
+    eggthird:null,
+    greenfirst:null,
+    greensecond:null,
+    greenthird:null,
+    applefirst:null,
+    applesecond:null,
+    applethird:null,
+    orangefirst:null,
+    orangesecond:null,
+    orangethird:null,
 }
 var spear = cc.Class({
     extends: cc.Component,
@@ -50,54 +68,6 @@ var spear = cc.Class({
         //Collison
         cc.director.getCollisionManager().enabled = true;
 
-        // this.node.on(cc.Node.EventType.TOUCH_START, () => { 
-        //     console.log("TOUCH_START")
-        //     Global.reset = 0;
-    
-        //         // this.schedule(function() {
-        //         //     // Here `this` is referring to the component
-        //         //     console.log(this.intervalSetting());
-        //         // }, 1);
-
-        //         this.callback = function () {
-        //             if (Global.count === 3 || Global.reset == 1) {
-        //                 // Cancel this timer at the sixth call-back
-        //                 this.unschedule(this.callback);
-
-        //             }
-        //             else if(Global.count < 3 || Global.reset == 0){
-        //                 this.intervalSetting();
-        //                 console.log(Global.count);
-
-        //             }
-
-
-                    
-                
-        //         }
-        //         this.schedule(this.callback, 1);
-            
-
-
-        // }, this, true);
-
-        // this.node.on(cc.Node.EventType.TOUCH_MOVE, () => {
-        //     console.log("TOUCH_MOVE");
-            
-
-        // }, this, true);
-
-        // this.node.on(cc.Node.EventType.TOUCH_END, () => {
-        //     console.log("TOUCH_END");
-        //     this.startMoveAt();
-        //     this.resetCount();
-
-        // }, this, true);
-
-        // this.node.on(cc.Node.EventType.TOUCH_CANCEL, () => {
-        //     console.log("TOUCH_CANCEL");
-        //     this.resetCount();
-        // }, this, true);
 
     },
 
@@ -126,6 +96,7 @@ var spear = cc.Class({
             var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0, this.jumpHeight)).easing(cc.easeCubicActionOut());
             // 下落
             var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.jumpHeight)).easing(cc.easeCubicActionIn());
+            console.log("hello");
 
         }
         //Rotate

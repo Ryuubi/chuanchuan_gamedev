@@ -17,63 +17,120 @@ cc._RF.push(module, '87891SnCzND2IGBVf9x9lUW', 'Apple', __filename);
 cc.Class({
     extends: cc.Component,
 
-    properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
-    },
+    properties: {},
 
+    // LIFE-CYCLE CALLBACKS:
+
+    // onLoad () {},
     onLoad: function onLoad() {
 
         cc.director.getCollisionManager().enabled = true;
+        var actionBy = this.rotateFood();
+        this.node.runAction(actionBy);
+    },
+
+    rotateFood: function rotateFood() {
+        var sactionBy = cc.rotateBy(1, 90);
+        return cc.repeatForever(sactionBy);
+    },
+
+    realign: function realign() {
+        this.node.anchorX = 0.5;
+        this.node.anchorY = 0.5;
     },
 
     onCollisionEnter: function onCollisionEnter(other, self) {
-
         console.log('hit');
+        this.node.stopAllActions();
 
         if (Global.arrayfood.length == 6) {
             Global.arrayfood.slice(0, 5);
             console.log(Global.arrayfood);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
-        } else if (Global.arrayfood.length == 0) {
+        } else if (Global.arrayfood.length == 0 && this.node.y > 100) {
             Global.arrayfood.push("Apple");
             console.log(Global.arrayfood);
-            this.node.setPosition(339, -100);
+            this.realign();
+            this.node.setPosition(19, -350);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
-        } else if (Global.arrayfood.length == 1) {
-            Global.arrayfood.push("Orange");
+        } else if (Global.arrayfood.length == 1 && this.node.y > 100) {
+            Global.arrayfood.push("Apple");
             console.log(Global.arrayfood);
-            this.node.setPosition(339, -40);
+            this.realign();
+            this.node.setPosition(19, -300);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 2 && this.node.y > 100) {
+            Global.arrayfood.push("Apple");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -250);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 3 && this.node.y > 100) {
+            Global.arrayfood.push("Apple");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -200);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 4 && this.node.y > 100) {
+            Global.arrayfood.push("Apple");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -150);
+            console.log(this.hasConsecutive(Global.arrayfood, 3));
+        } else if (Global.arrayfood.length == 5 && this.node.y > 100) {
+            Global.arrayfood.push("Apple");
+            console.log(Global.arrayfood);
+            this.realign();
+            this.node.setPosition(19, -100);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
         }
     },
 
     hasConsecutive: function hasConsecutive(arr, amount) {
         var last = null;
+        var currentNode = this.node;
         var count = 0;
         for (var i = 0; i < arr.length; i++) {
             if (arr[i] != last) {
                 last = arr[i];
                 count = 0;
+
+                console.log("Reset to 0 again");
             }
+
+            console.log("Count Number before Add : " + count);
+
             count += 1;
+
+            console.log("First Fruit : " + Global.first);
+            console.log("Count Number after Add : " + count);
+
+            if (arr[i] == last && count == 1 && Global.applefirst == null) {
+
+                Global.applefirst = currentNode;
+            }
+
+            if (arr[i] == last && count == 2 && Global.applesecond == null) {
+
+                Global.applesecond = currentNode;
+            }
+            if (arr[i] == last && count == 3 && Global.applethird == null) {
+                Global.applethird = currentNode;
+            }
+
+            console.log("hasConsecutive orange", amount, count);
             if (amount <= count) {
                 Global.arrayfood.pop();
                 Global.arrayfood.pop();
                 Global.arrayfood.pop();
+                Global.applefirst.destroy();
+                Global.applesecond.destroy();
+                Global.applethird.destroy();
+
+                Global.applefirst = null;
+                Global.applesecond = null;
+                Global.applethird = null;
+
                 console.log("hasConsecutive end orange", Global.arrayfood);
                 return true;
             }
@@ -81,6 +138,7 @@ cc.Class({
         return false;
     }
 
+    // update (dt) {},
 });
 
 cc._RF.pop();
