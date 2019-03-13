@@ -43,10 +43,15 @@ cc.Class({
         console.log('hit');
         this.node.stopAllActions();
 
-        if (Global.arrayfood.length == 6) {
-            Global.arrayfood.slice(0, 5);
+        if (Global.arrayfood.length == 6 && this.node.y > 100) {
+            Global.arrayfood.push("Egg");
             console.log(Global.arrayfood);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
+            if (Global.arrayfood.length == 7) {
+                console.log("Game over");
+                Global.arrayfood = [];
+                cc.game.restart();
+            }
         } else if (Global.arrayfood.length == 0 && this.node.y > 100) {
             Global.arrayfood.push("Egg");
             console.log(Global.arrayfood);
@@ -109,32 +114,35 @@ cc.Class({
             if (arr[i] == last && count == 1 && Global.eggfirst == null) {
 
                 Global.eggfirst = currentNode;
-                console.log(Global.waterfirst + "     checkwater1");
-                console.log(Global.watersecond + "     checkwater2");
-                console.log(Global.waterthird + "     checkwater3");
-                console.log(Global.eggfirst + "        check egg1");
-                console.log(Global.eggsecond + "        check egg2");
-                console.log(Global.eggthird + "        check egg3");
+                Global.replacementcount = 1;
+
+                console.log("Log first");
+                console.log("Log replacement count" + Global.replacementcount);
+                break;
             }
 
-            if (arr[i] == last && count == 2 && Global.eggsecond == null) {
+            if (arr[i] == last && count == 1 && Global.eggsecond == null && Global.eggfirst != null) {
 
                 Global.eggsecond = currentNode;
-                console.log(Global.waterfirst + "     checkwater1");
-                console.log(Global.watersecond + "     checkwater2");
-                console.log(Global.waterthird + "     checkwater3");
-                console.log(Global.eggfirst + "        check egg1");
-                console.log(Global.eggsecond + "        check egg2");
-                console.log(Global.eggthird + "        check egg3");
+
+                console.log("Log second");
+                break;
             }
+
+            if (arr[i] == last && count == 1 && Global.eggfirst != null && Global.replacementcount == 1 && Global.eggsecond == null && Global.eggthird == null) {
+
+                Global.eggfirst = currentNode;
+                Global.replacementcount = 2;
+
+                console.log("Log first");
+                console.log("Global.replacementcount" + Global.replacementcount);
+                break;
+            }
+
             if (arr[i] == last && count == 3 && Global.eggthird == null) {
                 Global.eggthird = currentNode;
-                console.log(Global.waterfirst + "     checkwater1");
-                console.log(Global.watersecond + "     checkwater2");
-                console.log(Global.waterthird + "     checkwater3");
-                console.log(Global.eggfirst + "        check egg1");
-                console.log(Global.eggsecond + "        check egg2");
-                console.log(Global.eggthird + "        check egg3");
+
+                console.log("Log third");
             }
 
             console.log("hasConsecutive orange", amount, count);

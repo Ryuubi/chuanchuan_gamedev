@@ -43,10 +43,15 @@ cc.Class({
         console.log('hit');
         this.node.stopAllActions();
 
-        if (Global.arrayfood.length == 6) {
-            Global.arrayfood.slice(0, 5);
+        if (Global.arrayfood.length == 6 && this.node.y > 100) {
+            Global.arrayfood.push("Green");
             console.log(Global.arrayfood);
             console.log(this.hasConsecutive(Global.arrayfood, 3));
+            if (Global.arrayfood.length == 7) {
+                console.log("Game over");
+                Global.arrayfood = [];
+                cc.game.restart();
+            }
         } else if (Global.arrayfood.length == 0 && this.node.y > 100) {
             Global.arrayfood.push("Green");
             console.log(Global.arrayfood);
@@ -104,14 +109,35 @@ cc.Class({
             if (arr[i] == last && count == 1 && Global.greenfirst == null) {
 
                 Global.greenfirst = currentNode;
+                Global.replacementcount = 1;
+
+                console.log("Log first");
+                console.log("Log replacement count" + Global.replacementcount);
+                break;
             }
 
-            if (arr[i] == last && count == 2 && Global.greensecond == null) {
+            if (arr[i] == last && count == 1 && Global.greensecond == null && Global.greenfirst != null) {
 
                 Global.greensecond = currentNode;
+
+                console.log("Log second");
+                break;
             }
+
+            if (arr[i] == last && count == 1 && Global.greenfirst != null && Global.replacementcount == 1 && Global.greensecond == null && Global.greenthird == null) {
+
+                Global.greenfirst = currentNode;
+                Global.replacementcount = 2;
+
+                console.log("Log first");
+                console.log("Global.replacementcount" + Global.replacementcount);
+                break;
+            }
+
             if (arr[i] == last && count == 3 && Global.greenthird == null) {
                 Global.greenthird = currentNode;
+
+                console.log("Log third");
             }
 
             console.log("hasConsecutive orange", amount, count);

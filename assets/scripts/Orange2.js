@@ -7,11 +7,16 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
+const game = require('Game')
 cc.Class({
     extends: cc.Component,
 
     properties: {
+
+        game:{
+            default: null,
+            type: game
+        }
 
     },
 
@@ -36,18 +41,25 @@ cc.Class({
       this.node.anchorX = 0.5
       this.node.anchorY = 0.5  
     },
+    
 
 
     onCollisionEnter:function(other,self){
         console.log('hit');
         this.node.stopAllActions();
         
-        if(Global.arrayfood.length == 6){
-            Global.arrayfood.slice(0,5)
+        if(Global.arrayfood.length == 6 && this.node.y > 100){
+            Global.arrayfood.push("Orange");
             console.log(Global.arrayfood);
             console.log(this.hasConsecutive(Global.arrayfood,3));
-
+            if(Global.arrayfood.length == 7){
+                console.log("Game over")
+                Global.arrayfood = []
+                cc.game.restart(); 
             
+
+
+            }
         }
         else if(Global.arrayfood.length == 0 && this.node.y > 100){
             Global.arrayfood.push("Orange");
@@ -121,18 +133,58 @@ cc.Class({
             if(arr[i]== last && count == 1 && Global.orangefirst == null){
                 
                 Global.orangefirst = currentNode;
+                Global.replacementcount = 1;
+
+
+                console.log("Log first")
+                console.log("Log replacement count"+Global.replacementcount)
+                break
 
             }
 
-
-            if(arr[i]== last && count == 2 && Global.orangesecond == null){
+            if(arr[i]== last && count == 1 && Global.orangesecond == null && Global.orangefirst != null){
                 
                 Global.orangesecond = currentNode;
 
-   
+                console.log("Log second")
+                break
+
+
+
             }
+            
+            if(arr[i] == last && count == 1 && Global.orangefirst != null && Global.replacementcount == 1 && Global.orangesecond == null && Global.orangethird == null){
+
+                Global.orangefirst = currentNode;
+                Global.replacementcount = 2;
+
+
+
+
+
+                console.log("Log first")
+                console.log("Global.replacementcount"+ Global.replacementcount)
+                break
+
+            }
+
+
+
+
+
+
+            
+
+
+            
+
+
             if(arr[i]== last && count == 3 && Global.orangethird == null){
                 Global.orangethird = currentNode;
+
+ 
+                console.log("Log third")
+
             }
 
 

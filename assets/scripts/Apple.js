@@ -42,12 +42,16 @@ cc.Class({
         console.log('hit');
         this.node.stopAllActions();
         
-        if(Global.arrayfood.length == 6){
-            Global.arrayfood.slice(0,5)
+        if(Global.arrayfood.length == 6 && this.node.y > 100){
+            Global.arrayfood.push("Apple");
             console.log(Global.arrayfood);
             console.log(this.hasConsecutive(Global.arrayfood,3));
+            if(Global.arrayfood.length == 7){
+                console.log("Game over")
+                Global.arrayfood = []
+                cc.game.restart();
 
-            
+            }
         }
         else if(Global.arrayfood.length == 0 && this.node.y > 100){
             Global.arrayfood.push("Apple");
@@ -122,17 +126,48 @@ cc.Class({
             if(arr[i]== last && count == 1 && Global.applefirst == null){
                 
                 Global.applefirst = currentNode;
+                Global.replacementcount = 1;
+
+
+                console.log("Log first")
+                console.log("Log replacement count"+Global.replacementcount)
+                break
 
             }
 
-
-            if(arr[i]== last && count == 2 && Global.applesecond == null){
+            if(arr[i]== last && count == 1 && Global.applesecond == null && Global.applefirst != null){
                 
                 Global.applesecond = currentNode;
 
+ 
+                console.log("Log second")
+                break
+
+
+
             }
+            
+            if(arr[i] == last && count == 1 && Global.applefirst != null && Global.replacementcount == 1 && Global.applesecond == null && Global.applethird == null){
+
+                Global.applefirst = currentNode;
+                Global.replacementcount = 2;
+
+
+
+ 
+
+                console.log("Log first")
+                console.log("Global.replacementcount"+ Global.replacementcount)
+                break
+
+            }
+
+            
             if(arr[i]== last && count == 3 && Global.applethird == null){
                 Global.applethird = currentNode;
+ 
+                console.log("Log third")
+
             }
 
 

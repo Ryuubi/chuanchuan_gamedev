@@ -31,33 +31,13 @@ var Game = cc.Class({
     onLoad: function onLoad() {
         var _this = this;
 
+        Global.gameover = 0;
+
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
             console.log("TOUCH_START");
             Global.reset = 0;
 
             _this.spear.holdMoveAt();
-
-            // this.schedule(function() {
-            //     // Here `this` is referring to the component
-            //     console.log(this.intervalSetting());
-            // }, 1);
-
-            // this.callback = function () {
-            //     if (Global.count === 3 || Global.reset == 1) {
-            //         // Cancel this timer at the sixth call-back
-            //         this.unschedule(this.callback);
-
-            //     }
-            //     else if(Global.count < 3 || Global.reset == 0){
-            //         this.spear.intervalSetting();
-            //         console.log(Global.count);
-
-            //     }
-
-
-            // }
-            // this.schedule(this.callback, 0.5);
-
         }, this, true);
 
         this.node.on(cc.Node.EventType.TOUCH_MOVE, function () {
@@ -80,6 +60,7 @@ var Game = cc.Class({
         this.enabled = false;
         // 初始化计分
         this.score = 0;
+        this.spear.enabled = true;
 
         // initialize star and score pool
         this.starPool = new cc.NodePool('Star');
@@ -107,17 +88,6 @@ var Game = cc.Class({
 
         this.btnNode.x = 3000;
         this.GameOver.active = false;
-    },
-
-    update: function update(dt) {
-        // 每帧更新计时器，超过限度还没有生成新的星星
-        // 就会调用游戏失败逻辑
-        if (this.timer > this.starDuration) {
-            this.gameOver();
-            this.enabled = false; // disable gameOver logic to avoid load scene repeatedly
-            return;
-        }
-        this.timer += dt;
     }
 
 });

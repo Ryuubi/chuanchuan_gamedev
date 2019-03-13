@@ -44,11 +44,6 @@
     "meta": 1551862386927,
     "relativePath": "mikado_outline_shadow.fnt"
   },
-  "5dcd99cb-77a4-4c95-a7d8-4b5b45295ae5": {
-    "asset": 1552368144540,
-    "meta": 1552368144557,
-    "relativePath": "game.fire"
-  },
   "51b0ea7f-a166-4130-bf0b-7f70fc60cb1d": {
     "asset": 1552356680529,
     "meta": 1547722704000,
@@ -364,39 +359,44 @@
     "meta": 1552286039617,
     "relativePath": "textures\\背景1.png"
   },
-  "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
-    "asset": 1552374784941,
-    "meta": 1552374785288,
-    "relativePath": "scripts\\Game.js"
-  },
-  "878914a7-0b33-43d8-8181-55ff71f65516": {
-    "asset": 1552377498945,
-    "meta": 1552377499825,
-    "relativePath": "scripts\\Apple.js"
-  },
-  "a003e43b-a440-4e77-abc3-df59411caaf6": {
-    "asset": 1552380875995,
-    "meta": 1552380876411,
-    "relativePath": "scripts\\GreenJelly.js"
-  },
-  "8ea5ef16-02fc-4f6a-a212-9e801bc0fb8b": {
-    "asset": 1552380866026,
-    "meta": 1552380876420,
-    "relativePath": "scripts\\Orange2.js"
-  },
-  "42d5351c-f962-4931-a6ba-2b92f4aafd9f": {
-    "asset": 1552381062599,
-    "meta": 1552381064497,
-    "relativePath": "scripts\\Egg.js"
+  "5dcd99cb-77a4-4c95-a7d8-4b5b45295ae5": {
+    "asset": 1552464828524,
+    "meta": 1552464828548,
+    "relativePath": "game.fire"
   },
   "0cacecec-732f-4fb6-8816-c916609b48bb": {
-    "asset": 1552381815531,
-    "meta": 1552381844940,
+    "asset": 1552461818063,
+    "meta": 1552462079124,
     "relativePath": "scripts\\Spear.js"
   },
+  "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
+    "asset": 1552464883086,
+    "meta": 1552464933541,
+    "relativePath": "scripts\\Game.js"
+  },
+  "42d5351c-f962-4931-a6ba-2b92f4aafd9f": {
+    "asset": 1552466235416,
+    "meta": 1552466255433,
+    "relativePath": "scripts\\Egg.js"
+  },
+  "a003e43b-a440-4e77-abc3-df59411caaf6": {
+    "asset": 1552466349315,
+    "meta": 1552466349780,
+    "relativePath": "scripts\\GreenJelly.js"
+  },
+  "878914a7-0b33-43d8-8181-55ff71f65516": {
+    "asset": 1552466702823,
+    "meta": 1552466940610,
+    "relativePath": "scripts\\Apple.js"
+  },
+  "8ea5ef16-02fc-4f6a-a212-9e801bc0fb8b": {
+    "asset": 1552466693933,
+    "meta": 1552466940611,
+    "relativePath": "scripts\\Orange2.js"
+  },
   "6b5b1c69-8927-47ef-88b8-90e9ba159847": {
-    "asset": 1552381880916,
-    "meta": 1552381881301,
+    "asset": 1552467398166,
+    "meta": 1552471467622,
     "relativePath": "scripts\\BlueWater.js"
   }
 }
