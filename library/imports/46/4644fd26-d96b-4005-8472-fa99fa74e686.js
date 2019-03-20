@@ -1,47 +1,58 @@
 "use strict";
-cc._RF.push(module, '4644f0m2WtABYRy+pn6dOaG', 'Star');
-// scripts/Star.js
+cc._RF.push(module, '4644f0m2WtABYRy+pn6dOaG', 'Stone');
+// scripts/Stone.js
 
-"use strict";
+'use strict';
+
+var Spear = require('Spear');
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        // 星星和主角之间的距离小于这个数值时，就会完成收集
-        pickRadius: 0
+        spear: {
+            default: null,
+            type: Spear
+        }
     },
 
-    getPlayerDistance: function getPlayerDistance() {
-        // 根据 player 节点位置判断距离
-        var playerPos = this.game.player.getCenterPos();
-        // 根据两点位置计算两点之间距离
-        var dist = this.node.position.sub(playerPos).mag();
-        return dist;
-    },
-
-    onPicked: function onPicked() {
-        // 当星星被收集时，调用 Game 脚本中的接口，生成一个新的星星
-        this.game.spawnNewStar();
-        // 调用 Game 脚本的得分方法
-        this.game.gainScore();
-        // 然后销毁当前星星节点
-        this.node.destroy();
+    start: function start() {
+        this._timer = 0.0;
     },
 
     update: function update(dt) {
-        // 每帧判断和主角之间的距离是否小于收集距离
-        if (this.getPlayerDistance() < this.pickRadius) {
-            // 调用收集行为
-            this.onPicked();
-            return;
-        }
+        this._timer += dt;
+        var pos = 0;
+        if (this._timer >= 0.0) {
+            pos = this.node.getPosition();
+            // console.log(pos + " finding position")
 
-        // 根据 Game 脚本中的计时器更新星星的透明度
-        var opacityRatio = 1 - this.game.timer / this.game.starDuration;
-        var minOpacity = 50;
-        this.node.opacity = minOpacity + Math.floor(opacityRatio * (255 - minOpacity));
+            if (pos.x <= -600) {
+                // console.log(pos + "before reset position")
+                this.node.setPosition(300, pos.y);
+                // console.log(this.node.getPosition()+ "after reset position")
+
+            }
+        }
+    },
+
+    onLoad: function onLoad() {
+
+        var moveleftway = this.moveFood();
+        this.node.runAction(moveleftway);
+    },
+
+    moveFood: function moveFood() {
+
+        var moveleft = cc.moveBy(4, cc.v2(-800, 0));
+        return cc.repeatForever(moveleft);
+    },
+
+    onCollisionEnter: function onCollisionEnter(other, self) {
+        console.log('hit');
+        this.spear.stopMoveAt();
     }
+
 });
 
 cc._RF.pop();

@@ -1,0 +1,231 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "btn_play",
+    "_objFlags": 0,
+    "_native": "",
+    "data": {
+      "__id__": 1
+    },
+    "optimizationPolicy": 0,
+    "asyncLoadAssets": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "btn_play",
+    "_objFlags": 0,
+    "_parent": null,
+    "_children": [],
+    "_active": true,
+    "_level": 1,
+    "_components": [
+      {
+        "__id__": 2
+      },
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      }
+    ],
+    "_prefab": {
+      "__id__": 5
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 15,
+      "height": 400
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 21,
+      "y": -311,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_zIndex": 0,
+    "groupIndex": 2,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "c059f05c-c451-4e5a-bc26-a431e34dd3dc"
+    },
+    "_type": 0,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_state": 0,
+    "_atlas": null,
+    "_id": ""
+  },
+  {
+    "__type__": "0cacezscy9PtogWyRZgm0i7",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "jumpHeight": 100,
+    "jumpDuration": 0.3,
+    "maxMoveSpeed": 400,
+    "accel": 350,
+    "MedjumpHeight": 400,
+    "MaxjumpHeight": 600,
+    "animationEffect": {
+      "__uuid__": "4808ad61-97c3-45f2-8c9c-19fc56f781a6"
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PolygonCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "points": [
+      {
+        "__type__": "cc.Vec2",
+        "x": -1.5,
+        "y": 200.00000000000006
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -2.69,
+        "y": 197.17
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.44,
+        "y": 193.71
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.44,
+        "y": 192.16
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.35,
+        "y": 190.45
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.43,
+        "y": 188.36
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -3.66,
+        "y": 187.04
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -4.05,
+        "y": 185.32
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -7.14,
+        "y": 164.74
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 6.19,
+        "y": 165.58
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 2.8,
+        "y": 186.02
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 2.79,
+        "y": 187.73
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 2.41,
+        "y": 189.47
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 2.05,
+        "y": 193.11
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 1.53,
+        "y": 196.91
+      }
+    ],
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__id__": 0
+    },
+    "fileId": "264F7fdi9EyZmd9ZhlD60K",
+    "sync": false
+  }
+]

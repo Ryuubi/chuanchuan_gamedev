@@ -18,26 +18,18 @@ window.Global = {
     count: 0,
     reset: 0,
     arrayfood: [],
+    arrayNode: [],
     first: null,
     second: null,
     third: null,
-    waterfirst: null,
-    watersecond: null,
-    waterthird: null,
-    eggfirst: null,
-    eggsecond: null,
-    eggthird: null,
-    greenfirst: null,
-    greensecond: null,
-    greenthird: null,
-    applefirst: null,
-    applesecond: null,
-    applethird: null,
-    orangefirst: null,
-    orangesecond: null,
-    orangethird: null,
+    firstnode: null,
+    secondnode: null,
+    thirdnode: null,
     replacementcount: 0,
-    gameover: 0
+    gameover: 0,
+    parentSpear: null,
+    position: null,
+    animation: 1
 
 };
 var spear = cc.Class({
@@ -55,7 +47,11 @@ var spear = cc.Class({
         //Medium Jump
         MedjumpHeight: 200,
         //Max Jump
-        MaxjumpHeight: 250
+        MaxjumpHeight: 250,
+        animationEffect: {
+            default: null,
+            type: cc.Prefab
+        }
 
     },
 
@@ -71,6 +67,7 @@ var spear = cc.Class({
         this.enabled = false;
         // 主角当前水平方向速度
         this.xSpeed = 0;
+        Global.parentSpear = this.node;
 
         //Collison
         cc.director.getCollisionManager().enabled = true;
@@ -109,15 +106,21 @@ var spear = cc.Class({
 
     goUp: function goUp() {
 
-        var jumpUp = cc.moveBy(0.9, cc.v2(0, this.MaxjumpHeight)).easing(cc.easeCubicActionOut());
-        // return cc.repeat(cc.sequence(jumpUp,jumpDown),1);   
-        return cc.repeatForever(jumpUp);
+        var jumpUp = cc.moveBy(0.25, cc.v2(0, this.MaxjumpHeight));
+        return cc.repeat(jumpUp, 1);
+        // return cc.repeatForever(jumpUp);
     },
 
     goDown: function goDown() {
 
-        var jumpDown = cc.moveTo(0.2, cc.v2(20, -311));
+        var jumpDown = cc.moveTo(0.1, cc.v2(21, -311));
         return cc.repeat(jumpDown, 1);
+    },
+
+    animation: function animation() {
+        var anime = cc.instantiate(this.animationEffect);
+        anime.setPosition(cc.v2(Global.position.x, Global.position.y));
+        this.node.addChild(anime);
     },
 
     setJumpAction: function setJumpAction() {
@@ -128,26 +131,20 @@ var spear = cc.Class({
             // 下落
             var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.jumpHeight)).easing(cc.easeCubicActionIn());
             console.log("hello");
+        } else if (Global.count == 2) {
+
+            // 跳跃上升
+            var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0, this.MedjumpHeight)).easing(cc.easeCubicActionOut());
+            // 下落
+            var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.MedjumpHeight)).easing(cc.easeCubicActionIn());
+            //Rotate
+        } else if (Global.count == 3) {
+
+            // 跳跃上升
+            var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0, this.MaxjumpHeight)).easing(cc.easeCubicActionOut());
+            // 下落
+            var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.MaxjumpHeight)).easing(cc.easeCubicActionIn());
         }
-        //Rotate
-        // var actionBy = cc.rotateBy(1,160);
-        // 不断重复，而且每次完成落地动作后调用回调来播放声音
-
-
-        else if (Global.count == 2) {
-
-                // 跳跃上升
-                var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0, this.MedjumpHeight)).easing(cc.easeCubicActionOut());
-                // 下落
-                var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.MedjumpHeight)).easing(cc.easeCubicActionIn());
-                //Rotate
-            } else if (Global.count == 3) {
-
-                // 跳跃上升
-                var jumpUp = cc.moveBy(this.jumpDuration, cc.v2(0, this.MaxjumpHeight)).easing(cc.easeCubicActionOut());
-                // 下落
-                var jumpDown = cc.moveBy(this.jumpDuration, cc.v2(0, -this.MaxjumpHeight)).easing(cc.easeCubicActionIn());
-            }
 
         return cc.repeat(cc.sequence(jumpUp, jumpDown), 1);
     },
@@ -156,9 +153,14 @@ var spear = cc.Class({
         this.enabled = true;
         this.xSpeed = 0;
         this.node.runAction(this.setJumpAction());
-    }
+    },
 
-    // update (dt) {},
+    update: function update(dt) {
+        if (Global.animation == 2) {
+            this.animation();
+            Global.animation = 1;
+        }
+    }
 });
 
 cc._RF.pop();
