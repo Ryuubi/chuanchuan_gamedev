@@ -14,7 +14,7 @@ cc._RF.push(module, '8ea5e8WAvxPaqISnoAbwPuL', 'Orange2', __filename);
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 var game = require('Game');
-cc.Class({
+var Orange2 = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -87,6 +87,10 @@ cc.Class({
             pos = this.node.getPosition();
             // console.log(pos + " finding position")
 
+            if (Global.gameEnd == 1) {
+                this.stopMoveAt();
+            }
+
             if (pos.x <= -600) {
                 // console.log(pos + "before reset position")
                 this.node.setPosition(300, pos.y);
@@ -109,6 +113,10 @@ cc.Class({
     realign: function realign() {
         this.node.anchorX = 0.5;
         this.node.anchorY = 0.5;
+    },
+
+    stopMoveAt: function stopMoveAt() {
+        this.node.stopAllActions();
     },
 
     goDownPos1: function goDownPos1() {

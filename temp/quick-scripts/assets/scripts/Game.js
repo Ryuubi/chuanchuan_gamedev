@@ -30,6 +30,10 @@ var Game = cc.Class({
             default: null,
             type: cc.AudioClip
         },
+        restartBtn: {
+            default: null,
+            type: cc.Node
+        },
 
         waterPrefab: cc.Prefab,
         greenPrefab: cc.Prefab,
@@ -37,12 +41,15 @@ var Game = cc.Class({
         applePrefab: cc.Prefab,
         applePrefab2: cc.Prefab,
         orangePrefab: cc.Prefab,
-        stonePrefab: cc.Prefab
+        bombPrefab: cc.Prefab
 
     },
 
     onLoad: function onLoad() {
         var _this = this;
+
+        Global.gameEnd = 0;
+        this.restartBtn.active = false;
 
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
             console.log("TOUCH_START");
@@ -87,6 +94,33 @@ var Game = cc.Class({
         this.orangePool = new cc.NodePool('Orange');
         this.orangePool2 = new cc.NodePool('Orange2');
 
+        this.bombPool = new cc.NodePool('Bomb');
+        this.bombPool2 = new cc.NodePool('Bomb2');
+
+        // spawning Bomb dynamically row 3
+        var initCountBomb = 1;
+        for (var i = 0; i < initCountBomb; ++i) {
+            var bomb = cc.instantiate(this.bombPrefab); // create node instance
+            this.bombPool.put(bomb); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function () {
+            this.spawnNewBomb();
+        }, interval, this.bombPool.size(), 0);
+
+        // spawning Bomb dynamically row 3
+        var initCountBomb2 = 0;
+        for (var _i = 0; _i < initCountBomb2; ++_i) {
+            var bomb2 = cc.instantiate(this.bombPrefab); // create node instance
+            this.bombPool2.put(bomb2); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function () {
+            this.spawnNewBomb();
+        }, interval, this.bombPool2.size(), 4.5);
+
         // //Play music
         //  // Time interval in units of seconds
         // var interval = 1;
@@ -102,7 +136,7 @@ var Game = cc.Class({
 
         // spawning water dynamically row 2
         var initCount = 1;
-        for (var i = 0; i < initCount; ++i) {
+        for (var _i2 = 0; _i2 < initCount; ++_i2) {
             var water = cc.instantiate(this.waterPrefab); // create node instance
             this.waterPool.put(water); // populate your pool with put method
         }
@@ -116,7 +150,7 @@ var Game = cc.Class({
 
         // spawning water dynamically row 3
         var initCount2 = 0;
-        for (var _i = 0; _i < initCount2; ++_i) {
+        for (var _i3 = 0; _i3 < initCount2; ++_i3) {
             var water2 = cc.instantiate(this.waterPrefab); // create node instance
             this.waterPool2.put(water2); // populate your pool with put method
         }
@@ -145,28 +179,29 @@ var Game = cc.Class({
 
 
         // spawning Egg dynamically row 3
-        var initCountEgg = 1;
-        for (var _i2 = 0; _i2 < initCountEgg; ++_i2) {
-            var egg = cc.instantiate(this.eggPrefab); // create node instance
-            this.eggPool.put(egg); // populate your pool with put method
-        }
-        var interval = 1.5;
+        // let initCountEgg = 1;
+        // for (let i = 0; i < initCountEgg; ++i) {
+        //     let egg = cc.instantiate(this.eggPrefab); // create node instance
+        //     this.eggPool.put(egg); // populate your pool with put method
+        // }
+        // var interval = 1.5;
 
-        this.schedule(function () {
-            this.spawnNewEgg();
-        }, interval, this.eggPool.size(), 0);
+        // this.schedule(function() {
+        //     this.spawnNewEgg();
+        // }, interval, this.eggPool.size(), 0);
 
-        // spawning Egg dynamically row 3
-        var initCountEgg2 = 0;
-        for (var _i3 = 0; _i3 < initCountEgg2; ++_i3) {
-            var egg2 = cc.instantiate(this.eggPrefab); // create node instance
-            this.eggPool2.put(egg2); // populate your pool with put method
-        }
-        var interval = 1.5;
+        // // spawning Egg dynamically row 3
+        // let initCountEgg2 = 0;
+        // for (let i = 0; i < initCountEgg2; ++i) {
+        //     let egg2 = cc.instantiate(this.eggPrefab); // create node instance
+        //     this.eggPool2.put(egg2); // populate your pool with put method
+        // }
+        // var interval = 1.5;
 
-        this.schedule(function () {
-            this.spawnNewEgg();
-        }, interval, this.eggPool2.size(), 4.5);
+        // this.schedule(function() {
+        //     this.spawnNewEgg();
+        // }, interval, this.eggPool2.size(), 4.5);
+
 
         // spawning Apple2 dynamically row 1
         var initCountApple2 = 0;
@@ -331,6 +366,32 @@ var Game = cc.Class({
         var randX = 300;
         // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
         var randY = 105;
+        // return to the anchor point of the star
+        return cc.v2(randX, randY);
+    },
+
+    spawnNewBomb: function spawnNewBomb() {
+        // generate a new node in the scene with a preset template
+        var newBomb = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.bombPool.size() > 0) {
+            console.log(this.bombPool.size() + " What is the pool size");
+            newBomb = this.bombPool.get(); // this will be passed to Star's reuse method
+        } else {
+            newBomb = cc.instantiate(this.bombPrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newBomb);
+        // set up a random position for the star
+        newBomb.setPosition(this.getNewBombPosition());
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
+    },
+
+    getNewBombPosition: function getNewBombPosition() {
+        var randX = 300;
+        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+        var randY = 309;
         // return to the anchor point of the star
         return cc.v2(randX, randY);
     },

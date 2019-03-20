@@ -207,6 +207,9 @@
     "successAudio": {
       "__uuid__": "40d1d02e-beda-4b92-89a1-bf0d885484e0"
     },
+    "gameOver": {
+      "__uuid__": "0e9e956c-35e1-41bd-9053-e030dad00c21"
+    },
     "_id": ""
   },
   {

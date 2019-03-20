@@ -21,6 +21,10 @@ cc.Class({
             default: null,
             type: cc.AudioClip
         },
+        gameOver: {
+            default:null,
+            type: cc.Prefab
+        }
 
     },
 
@@ -142,7 +146,10 @@ cc.Class({
             if (Global.arrayfood.length == 7) {
                 console.log("Game over")
                 Global.arrayfood = []
-                cc.game.restart();
+                var gameOverlbl = cc.instantiate(this.gameOver);
+                this.node.addChild(gameOverlbl);
+                // cc.game.restart();
+                cc.director.pause();
 
             }
         } else if (Global.arrayfood.length == 0 && this.node.y > 100) {

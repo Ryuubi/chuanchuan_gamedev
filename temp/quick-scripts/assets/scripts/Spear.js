@@ -29,7 +29,9 @@ window.Global = {
     gameover: 0,
     parentSpear: null,
     position: null,
-    animation: 1
+    animation: 1,
+    explosionAnimation: 1,
+    gameEnd: 0
 
 };
 var spear = cc.Class({
@@ -49,6 +51,10 @@ var spear = cc.Class({
         //Max Jump
         MaxjumpHeight: 250,
         animationEffect: {
+            default: null,
+            type: cc.Prefab
+        },
+        explosionEffect: {
             default: null,
             type: cc.Prefab
         }
@@ -106,7 +112,7 @@ var spear = cc.Class({
 
     goUp: function goUp() {
 
-        var jumpUp = cc.moveBy(0.25, cc.v2(0, this.MaxjumpHeight));
+        var jumpUp = cc.moveBy(0.5, cc.v2(0, this.MaxjumpHeight));
         return cc.repeat(jumpUp, 1);
         // return cc.repeatForever(jumpUp);
     },
@@ -121,6 +127,11 @@ var spear = cc.Class({
         var anime = cc.instantiate(this.animationEffect);
         anime.setPosition(cc.v2(Global.position.x, Global.position.y));
         this.node.addChild(anime);
+    },
+
+    explosionAnimation: function explosionAnimation() {
+        var explosion = cc.instantiate(this.explosionEffect);
+        this.node.addChild(explosion);
     },
 
     setJumpAction: function setJumpAction() {
@@ -159,6 +170,10 @@ var spear = cc.Class({
         if (Global.animation == 2) {
             this.animation();
             Global.animation = 1;
+        }
+        if (Global.explosionAnimation == 2) {
+            this.explosionAnimation();
+            Global.explosionAnimation = 1;
         }
     }
 });
