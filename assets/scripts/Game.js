@@ -51,9 +51,6 @@ var Game = cc.Class({
     onLoad: function () {
 
         Global.gameEnd = 0
-        this.firstnode = null;
-        this.secondnode = null;
-        this.thirdnode = null;
         this.restartBtn.active = false;
         this.restartLabel.active = false;
 

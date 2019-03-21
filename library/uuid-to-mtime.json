@@ -494,14 +494,14 @@
     "meta": 1553152368804,
     "relativePath": "scripts\\Orange2.js"
   },
-  "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
-    "asset": 1553153091939,
-    "meta": 1553153107768,
-    "relativePath": "scripts\\Game.js"
-  },
   "0cacecec-732f-4fb6-8816-c916609b48bb": {
     "asset": 1553153106732,
     "meta": 1553153107768,
     "relativePath": "scripts\\Spear.js"
+  },
+  "4e12f2d2-42ed-4bf8-a57a-426c4389abd4": {
+    "asset": 1553153495186,
+    "meta": 1553153498132,
+    "relativePath": "scripts\\Game.js"
   }
 }

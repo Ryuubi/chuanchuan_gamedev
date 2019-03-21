@@ -1253,3 +1253,8 @@ Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
+2019-03-21T07:31:38.701Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+Node path: "explosionParticles"
+Asset url: "db://assets/explosionParticles.prefab"
+Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+
