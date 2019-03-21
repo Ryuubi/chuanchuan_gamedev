@@ -1,64 +1,89 @@
-2019-03-21T01:01:14.860Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-21T01:01:15.936Z - normal: Initializing Asset Database
-2019-03-21T01:01:15.936Z - normal: checking language setting...
-2019-03-21T01:01:15.936Z - normal: Language: en
-2019-03-21T01:01:16.560Z - success: preview server running at http://localhost:7456
-2019-03-21T01:01:16.560Z - success: protocol editor-framework registered
-2019-03-21T01:01:16.560Z - success: protocol app registered
-2019-03-21T01:01:16.560Z - success: protocol theme registered
-2019-03-21T01:01:16.560Z - success: protocol packages registered
-2019-03-21T01:01:16.560Z - success: protocol uuid registerred
-2019-03-21T01:01:16.560Z - success: protocol db registerred
-2019-03-21T01:01:16.560Z - success: protocol thumbnail registerred
-2019-03-21T01:01:16.560Z - success: protocol unpack registerred
-2019-03-21T01:01:16.560Z - success: protocol disable-commonjs registerred
-2019-03-21T01:01:16.669Z - normal: connected!
-2019-03-21T01:01:16.669Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt
-2019-03-21T01:01:16.669Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt
-2019-03-21T01:01:17.262Z - normal: Initializing Cocos2d
-2019-03-21T01:01:17.902Z - normal: Initializing engine extends
-2019-03-21T01:01:17.933Z - success: asset-db-debugger loaded
-2019-03-21T01:01:17.933Z - success: code-editor loaded
-2019-03-21T01:01:17.933Z - success: color-picker loaded
-2019-03-21T01:01:18.011Z - success: fb-audience-network loaded
-2019-03-21T01:01:18.058Z - success: fb-live-stream loaded
-2019-03-21T01:01:18.058Z - success: google-play-instant loaded
-2019-03-21T01:01:18.058Z - success: huawei-runtime loaded
-2019-03-21T01:01:18.058Z - success: jsb-adapter loaded
-2019-03-21T01:01:18.073Z - success: oppo-runtime loaded
-2019-03-21T01:01:18.073Z - success: package-manager loaded
-2019-03-21T01:01:18.183Z - success: qqplay-adapter loaded
-2019-03-21T01:01:18.183Z - success: runtime-dev-tools loaded
-2019-03-21T01:01:18.183Z - success: sdkbox loaded
-2019-03-21T01:01:18.183Z - success: tester loaded
-2019-03-21T01:01:18.183Z - success: ui-grid loaded
-2019-03-21T01:01:18.183Z - success: ui-kit-preview-extra loaded
-2019-03-21T01:01:18.198Z - success: ui-kit-preview loaded
-2019-03-21T01:01:18.198Z - success: ui-kit loaded
-2019-03-21T01:01:18.198Z - success: ui-tree loaded
-2019-03-21T01:01:18.198Z - success: vivo-runtime loaded
-2019-03-21T01:01:18.198Z - success: weapp-adapter loaded
-2019-03-21T01:01:18.245Z - success: assets loaded
-2019-03-21T01:01:18.245Z - success: builder loaded
-2019-03-21T01:01:18.463Z - success: cocos-services loaded
-2019-03-21T01:01:18.479Z - success: console loaded
-2019-03-21T01:01:18.510Z - success: fb-instant-games loaded
-2019-03-21T01:01:18.510Z - success: google-instant-games loaded
-2019-03-21T01:01:18.510Z - success: hierarchy loaded
-2019-03-21T01:01:18.510Z - success: inspector loaded
-2019-03-21T01:01:18.510Z - success: keystore loaded
-2019-03-21T01:01:18.510Z - success: node-library loaded
-2019-03-21T01:01:18.510Z - success: package-asset loaded
-2019-03-21T01:01:18.510Z - success: preferences loaded
-2019-03-21T01:01:18.510Z - success: project-exporter loaded
-2019-03-21T01:01:18.526Z - success: project-importer loaded
-2019-03-21T01:01:18.526Z - success: project-settings loaded
-2019-03-21T01:01:18.526Z - success: scene loaded
-2019-03-21T01:01:18.526Z - success: simulator-debugger loaded
-2019-03-21T01:01:18.526Z - success: sprite-editor loaded
-2019-03-21T01:01:18.526Z - success: store loaded
-2019-03-21T01:01:18.526Z - success: timeline loaded
-2019-03-21T01:01:19.717Z - normal: Loading packages
-2019-03-21T01:01:19.732Z - normal: Watching packages
-2019-03-21T01:01:20.138Z - normal: Run Application
-2019-03-21T01:01:20.222Z - info: Cocos Services load base data!
+2019-03-21T01:47:33.048Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-21T01:47:34.201Z - normal: Initializing Asset Database
+2019-03-21T01:47:34.203Z - normal: checking language setting...
+2019-03-21T01:47:34.203Z - normal: Language: en
+2019-03-21T01:47:34.753Z - success: preview server running at http://localhost:7456
+2019-03-21T01:47:34.755Z - success: protocol editor-framework registered
+2019-03-21T01:47:34.755Z - success: protocol app registered
+2019-03-21T01:47:34.755Z - success: protocol theme registered
+2019-03-21T01:47:34.755Z - success: protocol packages registered
+2019-03-21T01:47:34.756Z - success: protocol uuid registerred
+2019-03-21T01:47:34.756Z - success: protocol db registerred
+2019-03-21T01:47:34.756Z - success: protocol thumbnail registerred
+2019-03-21T01:47:34.756Z - success: protocol unpack registerred
+2019-03-21T01:47:34.756Z - success: protocol disable-commonjs registerred
+2019-03-21T01:47:34.871Z - normal: connected!
+2019-03-21T01:47:34.875Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt
+2019-03-21T01:47:34.880Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt
+2019-03-21T01:47:35.458Z - normal: Initializing Cocos2d
+2019-03-21T01:47:36.094Z - normal: Initializing engine extends
+2019-03-21T01:47:36.112Z - success: asset-db-debugger loaded
+2019-03-21T01:47:36.114Z - success: code-editor loaded
+2019-03-21T01:47:36.115Z - success: color-picker loaded
+2019-03-21T01:47:36.196Z - success: fb-audience-network loaded
+2019-03-21T01:47:36.244Z - success: fb-live-stream loaded
+2019-03-21T01:47:36.247Z - success: google-play-instant loaded
+2019-03-21T01:47:36.250Z - success: huawei-runtime loaded
+2019-03-21T01:47:36.251Z - success: jsb-adapter loaded
+2019-03-21T01:47:36.254Z - success: oppo-runtime loaded
+2019-03-21T01:47:36.259Z - success: package-manager loaded
+2019-03-21T01:47:36.363Z - success: qqplay-adapter loaded
+2019-03-21T01:47:36.365Z - success: runtime-dev-tools loaded
+2019-03-21T01:47:36.368Z - success: sdkbox loaded
+2019-03-21T01:47:36.371Z - success: tester loaded
+2019-03-21T01:47:36.372Z - success: ui-grid loaded
+2019-03-21T01:47:36.374Z - success: ui-kit-preview-extra loaded
+2019-03-21T01:47:36.376Z - success: ui-kit-preview loaded
+2019-03-21T01:47:36.377Z - success: ui-kit loaded
+2019-03-21T01:47:36.378Z - success: ui-tree loaded
+2019-03-21T01:47:36.380Z - success: vivo-runtime loaded
+2019-03-21T01:47:36.380Z - success: weapp-adapter loaded
+2019-03-21T01:47:36.430Z - success: assets loaded
+2019-03-21T01:47:36.432Z - success: builder loaded
+2019-03-21T01:47:36.666Z - success: cocos-services loaded
+2019-03-21T01:47:36.668Z - success: console loaded
+2019-03-21T01:47:36.697Z - success: fb-instant-games loaded
+2019-03-21T01:47:36.700Z - success: google-instant-games loaded
+2019-03-21T01:47:36.703Z - success: hierarchy loaded
+2019-03-21T01:47:36.705Z - success: inspector loaded
+2019-03-21T01:47:36.706Z - success: keystore loaded
+2019-03-21T01:47:36.708Z - success: node-library loaded
+2019-03-21T01:47:36.710Z - success: package-asset loaded
+2019-03-21T01:47:36.711Z - success: preferences loaded
+2019-03-21T01:47:36.712Z - success: project-exporter loaded
+2019-03-21T01:47:36.713Z - success: project-importer loaded
+2019-03-21T01:47:36.715Z - success: project-settings loaded
+2019-03-21T01:47:36.717Z - success: scene loaded
+2019-03-21T01:47:36.718Z - success: simulator-debugger loaded
+2019-03-21T01:47:36.719Z - success: sprite-editor loaded
+2019-03-21T01:47:36.721Z - success: store loaded
+2019-03-21T01:47:36.723Z - success: timeline loaded
+2019-03-21T01:47:37.855Z - normal: Loading packages
+2019-03-21T01:47:37.859Z - normal: Watching packages
+2019-03-21T01:47:38.236Z - normal: Run Application
+2019-03-21T01:47:38.353Z - info: Cocos Services load base data!
+2019-03-21T01:56:23.273Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+Node path: "explosionParticles"
+Asset url: "db://assets/explosionParticles.prefab"
+Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+
+2019-03-21T01:56:31.764Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+Node path: "explosionParticles"
+Asset url: "db://assets/explosionParticles.prefab"
+Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+
+2019-03-21T01:56:53.550Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+Node path: "explosionParticles"
+Asset url: "db://assets/explosionParticles.prefab"
+Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+
+2019-03-21T01:57:34.454Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+Node path: "explosionParticles"
+Asset url: "db://assets/explosionParticles.prefab"
+Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+
+2019-03-21T01:58:39.954Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+Node path: "explosionParticles"
+Asset url: "db://assets/explosionParticles.prefab"
+Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+

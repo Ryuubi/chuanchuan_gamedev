@@ -71,7 +71,11 @@ cc.Class({
         if ( this._timer >= 0.0 ) {
             pos = this.node.getPosition();
 
-            if( pos.x <= -600 && pos.y == 309){
+            if(Global.gameEnd == 1){
+                this.stopMoveAt();
+            }
+
+            else if( pos.x <= -600 && pos.y == 309){
                 // console.log(pos + "before reset position")
                 this.node.setPosition(300,pos.y)
                 // console.log(this.node.getPosition()+ "after reset position")
@@ -98,6 +102,9 @@ cc.Class({
         console.log("onDestroy");
     },
 
+    stopMoveAt: function () {
+        this.node.stopAllActions();
+    },
 
 
     realign: function () {
@@ -167,7 +174,7 @@ cc.Class({
             if (Global.arrayfood.length == 7) {
                 console.log("Game over")
                 Global.arrayfood = []
-                cc.game.restart();
+                Global.gameEnd = 1
 
 
 

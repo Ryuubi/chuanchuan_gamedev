@@ -14,6 +14,16 @@ cc.Class({
         orange: {
             default: null,
             type: Orange
+        },
+
+        restartBtn: {
+            default: null,
+            type: cc.Prefab
+        },
+
+        restartLabel: {
+            default: null,
+            type: cc.Prefab
         }
     },
 
@@ -50,14 +60,19 @@ cc.Class({
         if (this._timer >= 0.0) {
             pos = this.node.getPosition();
             // console.log(pos + " finding position")
-
-            if (pos.x <= -600) {
+            if (Global.gameEnd == 1) {
+                this.stopMoveAt();
+            } else if (pos.x <= -600) {
                 // console.log(pos + "before reset position")
                 this.node.setPosition(300, pos.y);
                 // console.log(this.node.getPosition()+ "after reset position")
 
             }
         }
+    },
+
+    stopMoveAt: function stopMoveAt() {
+        this.node.stopAllActions();
     }
 
 });

@@ -261,8 +261,12 @@
       "__id__": 1
     },
     "_enabled": true,
-    "orangePrefab": {
-      "__uuid__": "a067f09c-9f85-4f78-8965-03aacf30eb64"
+    "orange": null,
+    "restartBtn": {
+      "__uuid__": "9696261e-893b-4c09-ac50-ac9d6e1d1b49"
+    },
+    "restartLabel": {
+      "__uuid__": "0e9e956c-35e1-41bd-9053-e030dad00c21"
     },
     "_id": ""
   },

@@ -173,7 +173,7 @@ var Orange2 = cc.Class({
             if (Global.arrayfood.length == 7) {
                 console.log("Game over");
                 Global.arrayfood = [];
-                cc.game.restart();
+                Global.gameEnd = 1;
             }
         } else if (Global.arrayfood.length == 0 && this.node.y > 100) {
             Global.arrayfood.push("Orange");

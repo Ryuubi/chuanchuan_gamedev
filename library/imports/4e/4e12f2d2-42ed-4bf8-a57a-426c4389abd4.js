@@ -35,6 +35,11 @@ var Game = cc.Class({
             type: cc.Node
         },
 
+        restartLabel: {
+            default: null,
+            type: cc.Node
+        },
+
         waterPrefab: cc.Prefab,
         greenPrefab: cc.Prefab,
         eggPrefab: cc.Prefab,
@@ -50,6 +55,7 @@ var Game = cc.Class({
 
         Global.gameEnd = 0;
         this.restartBtn.active = false;
+        this.restartLabel.active = false;
 
         this.node.on(cc.Node.EventType.TOUCH_START, function () {
             console.log("TOUCH_START");
@@ -200,8 +206,7 @@ var Game = cc.Class({
 
         // this.schedule(function() {
         //     this.spawnNewEgg();
-        // }, interval, this.eggPool2.size(), 4.5);
-
+        // }, interval, this.eggPool2.size(), 4.5)
 
         // spawning Apple2 dynamically row 1
         var initCountApple2 = 0;
@@ -286,6 +291,10 @@ var Game = cc.Class({
         this.schedule(function () {
             this.spawnNewOrange3();
         }, interval, this.orangePool2.size(), 4.5);
+    },
+
+    restartGame: function restartGame() {
+        cc.game.restart();
     },
 
     playMusic: function playMusic() {
@@ -612,9 +621,19 @@ var Game = cc.Class({
     onStartGame: function onStartGame() {
 
         this.enabled = true;
-
         this.btnNode.x = 3000;
         this.GameOver.active = false;
+    },
+
+    update: function update(dt) {
+        this._timer += dt;
+        if (this._timer >= 0.0) {
+            console.log("Test test");
+            if (Global.gameEnd == 1) {
+                this.restartBtn.active = true;
+                this.restartLabel.active = true;
+            }
+        }
     }
 
 });

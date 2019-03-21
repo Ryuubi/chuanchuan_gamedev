@@ -192,7 +192,7 @@ var Orange2 = cc.Class({
             if(Global.arrayfood.length == 7){
                 console.log("Game over")
                 Global.arrayfood = []
-                cc.game.restart(); 
+                Global.gameEnd = 1 
             
 
 

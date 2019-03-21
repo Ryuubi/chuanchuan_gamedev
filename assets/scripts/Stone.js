@@ -21,7 +21,12 @@ cc.Class({
             pos = this.node.getPosition();
             // console.log(pos + " finding position")
 
-            if( pos.x <= -600){
+            
+            if(Global.gameEnd == 1){
+                this.stopMoveAt();
+            }
+
+            else if( pos.x <= -600){
                 // console.log(pos + "before reset position")
                 this.node.setPosition(300,pos.y)
                 // console.log(this.node.getPosition()+ "after reset position")
@@ -55,7 +60,12 @@ cc.Class({
         this.spear.stopMoveAt();
 
         
-    }
+    },
+
+    stopMoveAt: function () {
+        this.node.stopAllActions();
+    },
+
 
 
 

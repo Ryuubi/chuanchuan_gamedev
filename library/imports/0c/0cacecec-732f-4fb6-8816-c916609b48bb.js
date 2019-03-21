@@ -4,6 +4,10 @@ cc._RF.push(module, '0cacezscy9PtogWyRZgm0i7', 'Spear');
 
 "use strict";
 
+var _cc$Class;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 // Learn cc.Class:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
 //  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
@@ -34,7 +38,7 @@ window.Global = {
     gameEnd: 0
 
 };
-var spear = cc.Class({
+var spear = cc.Class((_cc$Class = {
     extends: cc.Component,
 
     properties: {
@@ -57,6 +61,15 @@ var spear = cc.Class({
         explosionEffect: {
             default: null,
             type: cc.Prefab
+        },
+        restartBtn: {
+            default: null,
+            type: cc.Node
+        },
+
+        restartLabel: {
+            default: null,
+            type: cc.Node
         }
 
     },
@@ -164,18 +177,38 @@ var spear = cc.Class({
         this.enabled = true;
         this.xSpeed = 0;
         this.node.runAction(this.setJumpAction());
-    },
-
-    update: function update(dt) {
-        if (Global.animation == 2) {
-            this.animation();
-            Global.animation = 1;
-        }
-        if (Global.explosionAnimation == 2) {
-            this.explosionAnimation();
-            Global.explosionAnimation = 1;
-        }
     }
-});
+
+}, _defineProperty(_cc$Class, "stopMoveAt", function stopMoveAt() {
+    this.node.stopAllActions();
+}), _defineProperty(_cc$Class, "spawnGameOver", function spawnGameOver() {
+    // 使用给定的模板在场景中生成一个新节点
+    var Gameover = cc.instantiate(this.restartBtn);
+    this.node.addChild(Gameover);
+    Gameover.setPosition(this.getGameOverPos());
+    this.timer = 0;
+}), _defineProperty(_cc$Class, "getGameOverPos", function getGameOverPos() {
+    var randX = 0;
+    // 根据地平面位置和主角跳跃高度，随机得到一个星星的 y 坐标
+    var randY = 348;
+    // 返回星星坐标
+    return cc.v2(randX, randY);
+}), _defineProperty(_cc$Class, "update", function update(dt) {
+
+    if (Global.gameEnd == 1) {
+        this.stopMoveAt();
+        this.restartBtn.active = true;
+        this.restartLabel.active = true;
+    }
+
+    if (Global.animation == 2) {
+        this.animation();
+        Global.animation = 1;
+    }
+    if (Global.explosionAnimation == 2) {
+        this.explosionAnimation();
+        Global.explosionAnimation = 1;
+    }
+}), _cc$Class));
 
 cc._RF.pop();
