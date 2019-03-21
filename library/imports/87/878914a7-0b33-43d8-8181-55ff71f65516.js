@@ -16,6 +16,16 @@ cc.Class({
         successAudio: {
             default: null,
             type: cc.AudioClip
+        },
+
+        restartBtn: {
+            default: null,
+            type: cc.Prefab
+        },
+
+        restartLabel: {
+            default: null,
+            type: cc.Prefab
         }
 
     },
@@ -68,7 +78,9 @@ cc.Class({
         if (this._timer >= 0.0) {
             pos = this.node.getPosition();
 
-            if (pos.x > 600 && pos.y == 209) {
+            if (Global.gameEnd == 1) {
+                this.stopMoveAt();
+            } else if (pos.x > 600 && pos.y == 209) {
                 // console.log(pos + "before reset position")
                 this.node.setPosition(-400, pos.y);
                 // console.log(this.node.getPosition()+ "after reset position")
@@ -96,6 +108,9 @@ cc.Class({
     realign: function realign() {
         this.node.anchorX = 0.5;
         this.node.anchorY = 0.5;
+    },
+    stopMoveAt: function stopMoveAt() {
+        this.node.stopAllActions();
     },
 
     goDownPos1: function goDownPos1() {

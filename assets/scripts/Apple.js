@@ -12,6 +12,16 @@ cc.Class({
             type: cc.AudioClip
         },
 
+        restartBtn:{
+            default:null,
+            type: cc.Prefab
+        },
+
+        restartLabel:{
+            default:null,
+            type: cc.Prefab
+        },
+
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -46,10 +56,6 @@ cc.Class({
 
     },
 
-    
-
-    
-
     start: function () {
         this._timer = 0.0;
 
@@ -80,13 +86,18 @@ cc.Class({
         if ( this._timer >= 0.0 ) {
             pos = this.node.getPosition();
 
-            if( pos.x > 600 && pos.y == 209){
+            if(Global.gameEnd == 1){
+                this.stopMoveAt();
+            }
+
+            else if( pos.x > 600 && pos.y == 209){
                 // console.log(pos + "before reset position")
                 this.node.setPosition(-400,pos.y)
                 // console.log(this.node.getPosition()+ "after reset position")
 
                 
             }
+
 
             else if( pos.x <= -600 && pos.y == 105){
                 // console.log(pos + "before reset position")
@@ -119,6 +130,9 @@ cc.Class({
     realign:function(){
       this.node.anchorX = 0.5
       this.node.anchorY = 0.5  
+    },
+    stopMoveAt: function () {
+        this.node.stopAllActions();
     },
 
 
@@ -184,8 +198,9 @@ cc.Class({
             console.log(this.hasConsecutive(Global.arrayfood,3));
             if(Global.arrayfood.length == 7){
                 console.log("Game over")
-                Global.arrayfood = []
-                cc.game.restart();
+                Global.arrayfood = [];
+                Global.gameEnd = 1
+
 
             }
         }

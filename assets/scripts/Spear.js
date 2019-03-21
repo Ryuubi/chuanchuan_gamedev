@@ -52,7 +52,16 @@ var spear = cc.Class({
         explosionEffect:{
             default:null,
             type:cc.Prefab
-        }
+        },
+        restartBtn:{
+            default:null,
+            type: cc.Node
+        },
+
+        restartLabel:{
+            default:null,
+            type: cc.Node
+        },
 
     },
 
@@ -183,7 +192,34 @@ var spear = cc.Class({
         this.node.runAction(this.setJumpAction());
     },
 
+    stopMoveAt: function () {
+        this.node.stopAllActions();
+    },
+
+    spawnGameOver: function() {
+        // 使用给定的模板在场景中生成一个新节点
+        var Gameover = cc.instantiate(this.restartBtn);
+        this.node.addChild(Gameover);
+        Gameover.setPosition(this.getGameOverPos());
+        this.timer = 0;
+    },
+
+    getGameOverPos: function () {
+        var randX = 0;
+        // 根据地平面位置和主角跳跃高度，随机得到一个星星的 y 坐标
+        var randY = 348
+        // 返回星星坐标
+        return cc.v2(randX, randY);
+    },
+
     update (dt) {
+
+        if(Global.gameEnd == 1){
+            this.stopMoveAt();
+            this.restartBtn.active = true;
+            this.restartLabel.active = true;
+        }
+
         if (Global.animation == 2){
             this.animation();
             Global.animation = 1; 

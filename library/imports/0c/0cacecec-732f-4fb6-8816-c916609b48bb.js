@@ -4,6 +4,10 @@ cc._RF.push(module, '0cacezscy9PtogWyRZgm0i7', 'Spear');
 
 "use strict";
 
+var _cc$Class;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 // Learn cc.Class:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
 //  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
@@ -34,7 +38,7 @@ window.Global = {
     gameEnd: 0
 
 };
-var spear = cc.Class({
+var spear = cc.Class((_cc$Class = {
     extends: cc.Component,
 
     properties: {
@@ -164,18 +168,24 @@ var spear = cc.Class({
         this.enabled = true;
         this.xSpeed = 0;
         this.node.runAction(this.setJumpAction());
-    },
-
-    update: function update(dt) {
-        if (Global.animation == 2) {
-            this.animation();
-            Global.animation = 1;
-        }
-        if (Global.explosionAnimation == 2) {
-            this.explosionAnimation();
-            Global.explosionAnimation = 1;
-        }
     }
-});
+
+}, _defineProperty(_cc$Class, "stopMoveAt", function stopMoveAt() {
+    this.node.stopAllActions();
+}), _defineProperty(_cc$Class, "update", function update(dt) {
+
+    if (Global.gameEnd == 1) {
+        this.stopMoveAt();
+    }
+
+    if (Global.animation == 2) {
+        this.animation();
+        Global.animation = 1;
+    }
+    if (Global.explosionAnimation == 2) {
+        this.explosionAnimation();
+        Global.explosionAnimation = 1;
+    }
+}), _cc$Class));
 
 cc._RF.pop();

@@ -9,6 +9,16 @@ cc.Class({
             default: null,
             type: Orange
         },
+
+        restartBtn:{
+            default:null,
+            type: cc.Prefab
+        },
+
+        restartLabel:{
+            default:null,
+            type: cc.Prefab
+        },
     },
 
 
@@ -17,6 +27,7 @@ cc.Class({
         Global.explosionAnimation = 2;
         this.node.destroy();
         Global.gameEnd = 1;
+        
     },
 
     onLoad: function() {
@@ -38,6 +49,7 @@ cc.Class({
 
     },
 
+
     start: function () {
         this._timer = 0.0;
       },
@@ -48,8 +60,11 @@ cc.Class({
         if ( this._timer >= 0.0 ) {
             pos = this.node.getPosition();
             // console.log(pos + " finding position")
+            if(Global.gameEnd == 1){
+                this.stopMoveAt();
+            }
 
-            if( pos.x <= -600){
+            else if( pos.x <= -600){
                 // console.log(pos + "before reset position")
                 this.node.setPosition(300,pos.y)
                 // console.log(this.node.getPosition()+ "after reset position")
@@ -62,6 +77,11 @@ cc.Class({
 
 
       },
+
+    stopMoveAt: function () {
+        this.node.stopAllActions();
+    },
+
 
 
 

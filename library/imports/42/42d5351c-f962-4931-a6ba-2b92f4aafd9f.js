@@ -65,7 +65,9 @@ cc.Class({
             pos = this.node.getPosition();
             // console.log(pos + " finding position")
 
-            if (pos.x <= -600) {
+            if (Global.gameEnd == 1) {
+                this.stopMoveAt();
+            } else if (pos.x <= -600) {
                 // console.log(pos + "before reset position")
                 this.node.setPosition(300, pos.y);
                 // console.log(this.node.getPosition()+ "after reset position")
@@ -83,6 +85,10 @@ cc.Class({
     realign: function realign() {
         this.node.anchorX = 0.5;
         this.node.anchorY = 0.5;
+    },
+
+    stopMoveAt: function stopMoveAt() {
+        this.node.stopAllActions();
     },
 
     goDownPos1: function goDownPos1() {
