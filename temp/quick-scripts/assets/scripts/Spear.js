@@ -18,26 +18,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
-window.Global = {
-    count: 0,
-    reset: 0,
-    arrayfood: [],
-    arrayNode: [],
-    first: null,
-    second: null,
-    third: null,
-    firstnode: null,
-    secondnode: null,
-    thirdnode: null,
-    replacementcount: 0,
-    gameover: 0,
-    parentSpear: null,
-    position: null,
-    animation: 1,
-    gameEnd: 0,
-    stone: 0
 
-};
 var spear = cc.Class((_cc$Class = {
     extends: cc.Component,
 
