@@ -24,8 +24,8 @@ window.Global={
     parentSpear:null,
     position:null,
     animation:1, 
-    explosionAnimation:1,
     gameEnd:0,
+    stone:0,
     
     
 }
@@ -146,11 +146,6 @@ var spear = cc.Class({
         this.node.addChild(anime);
     },
 
-    explosionAnimation:function(){
-        var explosion = cc.instantiate(this.explosionEffect);
-        this.node.addChild(explosion);
-    },
-
     setJumpAction: function () {
 
 
@@ -220,13 +215,15 @@ var spear = cc.Class({
             this.restartLabel.active = true;
         }
 
+        if(Global.stone == 1){
+            this.stopMoveAt();
+            this.goDownAt();
+            Global.stone = 0
+        }
+
         if (Global.animation == 2){
             this.animation();
             Global.animation = 1; 
-        }
-        if (Global.explosionAnimation == 2){
-            this.explosionAnimation();
-            Global.explosionAnimation = 1; 
         }
     },
 });

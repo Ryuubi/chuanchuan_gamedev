@@ -43,6 +43,7 @@ var Game = cc.Class({
         applePrefab2: cc.Prefab,
         orangePrefab: cc.Prefab,
         bombPrefab: cc.Prefab,
+        stonePrefab: cc.Prefab,
 
 
     },
@@ -50,6 +51,9 @@ var Game = cc.Class({
     onLoad: function () {
 
         Global.gameEnd = 0
+        this.firstnode = null;
+        this.secondnode = null;
+        this.thirdnode = null;
         this.restartBtn.active = false;
         this.restartLabel.active = false;
 
@@ -87,6 +91,7 @@ var Game = cc.Class({
         //Node pools for different food object
         this.waterPool = new cc.NodePool('Water');
         this.waterPool2 = new cc.NodePool('Water2');
+        this.waterPool3 = new cc.NodePool('Water3');
 
         this.greenPool = new cc.NodePool('Green');
 
@@ -95,6 +100,7 @@ var Game = cc.Class({
 
         this.applePool = new cc.NodePool('Apple');
         this.applePool2 = new cc.NodePool('Apple2');
+        this.applePool3 = new cc.NodePool('Apple3');
 
         this.orangePool = new cc.NodePool('Orange');
         this.orangePool2 = new cc.NodePool('Orange2');
@@ -102,8 +108,11 @@ var Game = cc.Class({
         this.bombPool = new cc.NodePool('Bomb');
         this.bombPool2 = new cc.NodePool('Bomb2');
 
+        this.stonePool = new cc.NodePool('Stone');
+        this.stonePool2 = new cc.NodePool('Stone2');
+
         // spawning Bomb dynamically row 3
-        let initCountBomb = 1;
+        let initCountBomb = 0;
         for (let i = 0; i < initCountBomb; ++i) {
             let bomb = cc.instantiate(this.bombPrefab); // create node instance
             this.bombPool.put(bomb); // populate your pool with put method
@@ -112,52 +121,504 @@ var Game = cc.Class({
 
         this.schedule(function() {
             this.spawnNewBomb();
-        }, interval, this.bombPool.size(), 0);
+        }, interval, this.bombPool.size(), 3);
+
+
 
         // spawning Bomb dynamically row 3
-        let initCountBomb2 = 0;
-        for (let i = 0; i < initCountBomb2; ++i) {
-            let bomb2 = cc.instantiate(this.bombPrefab); // create node instance
-            this.bombPool2.put(bomb2); // populate your pool with put method
+        let initCountStone = 0;
+        for (let i = 0; i < initCountStone; ++i) {
+            let stone = cc.instantiate(this.stonePrefab); // create node instance
+            this.stonePool.put(stone); // populate your pool with put method
         }
         var interval = 1.5;
 
         this.schedule(function() {
-            this.spawnNewBomb();
-        }, interval, this.bombPool2.size(), 4.5);
+            this.spawnNewStone();
+        }, interval, this.stonePool.size(), 6.75);
 
 
         
 
         // //Play music
         //  // Time interval in units of seconds
-        // var interval = 1;
+        var interval = 1;
         // // Time of repetition
-        // var repeat = 0;
+        var repeat = 0;
         // // Start delay
-        // var delay = 0;
-        // this.schedule(function() {
-        //     // Here `this` is referring to the component
-        //     this.playMusic();
-        //     console.log("test music")
-        // }, interval, repeat, delay);
+        var delay = 0;
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.playMusic();
+            console.log("test music")
+        }, interval, repeat, delay);
 
-        // spawning water dynamically row 2
-        let initCount = 1;
-        for (let i = 0; i < initCount; ++i) {
-            let water = cc.instantiate(this.waterPrefab); // create node instance
-            this.waterPool.put(water); // populate your pool with put method
+
+
+
+        //infinite row 3
+
+                // Time interval in units of seconds
+        var infiniteinterval = 6.75;
+        // Time of repetition
+        var infiniterepeat = 100;
+        // Start delay
+        var infinitedelay = 6.75;
+        this.schedule(function() {
+
+            // ORANGE
+
+            let initCountOrangeRow3 = 0;
+            for (let i = 0; i < initCountOrangeRow3; ++i) {
+                let orange2 = cc.instantiate(this.orangePrefab); // create node instance
+                this.orangePool.put(orange2); // populate your pool with put method
+            }
+            var interval = 1.5;
+    
+            this.schedule(function() {
+                this.spawnNewOrange2();
+            }, interval, this.orangePool.size(), 6);
+    
+
+
+            // WATER
+            let initCount = 0;
+            for (let i = 0; i < initCount; ++i) {
+                let water2 = cc.instantiate(this.waterPrefab); // create node instance
+                this.waterPool2.put(water2); // populate your pool with put method
+            }
+            // Time interval in units of seconds
+            var interval = 1.5;
+            // Start delay
+            this.schedule(function() {
+                // Here `this` is referring to the component
+                this.spawnNewWater2();
+            }, interval, this.waterPool2.size(), 0);
+    
+            let initCount2 = 0;
+            for (let i = 0; i < initCount2; ++i) {
+                let water2 = cc.instantiate(this.waterPrefab); // create node instance
+                this.waterPool2.put(water2); // populate your pool with put method
+            }
+            var interval = 1.5;
+            this.schedule(function() {
+                this.spawnNewWater2();
+            }, interval, this.waterPool2.size(), 3.75);
+    
+    
+            let initCount3 = 0;
+            for (let i = 0; i < initCount3; ++i) {
+                let water2 = cc.instantiate(this.waterPrefab); // create node instance
+                this.waterPool2.put(water2); // populate your pool with put method
+            }
+            var interval = 1.5;
+            this.schedule(function() {
+                this.spawnNewWater2();
+            }, interval, this.waterPool2.size(), 7.5);
+
+
+            //APPLE
+
+            let initCountAppleRow32 = 0;
+            for (let i = 0; i < initCountAppleRow32; ++i) {
+                let apple = cc.instantiate(this.applePrefab); // create node instance
+                this.applePool.put(apple); // populate your pool with put method
+            }
+            var interval = 1.5;
+    
+            this.schedule(function() {
+                this.spawnNewApple2();
+            }, interval, this.applePool.size(), 2.25);
+
+
+            let initCountAppleRow3 = 0;
+            for (let i = 0; i < initCountAppleRow3; ++i) {
+                let apple = cc.instantiate(this.applePrefab); // create node instance
+                this.applePool2.put(apple); // populate your pool with put method
+            }
+            var interval = 2.25;
+    
+            this.schedule(function() {
+                this.spawnNewApple2();
+            }, interval, this.applePool2.size(), 2.25);
+
+    
+            let initCountAppleRow31 = 0;
+            for (let i = 0; i < initCountAppleRow31; ++i) {
+                let apple = cc.instantiate(this.applePrefab); // create node instance
+                this.applePool.put(apple); // populate your pool with put method
+            }
+            var interval = 1.5;
+    
+            this.schedule(function() {
+                this.spawnNewApple2();
+            }, interval, this.applePool.size(), 5.25);
+
+            // BOMB
+
+            let initCountBomb = 0;
+            for (let i = 0; i < initCountBomb; ++i) {
+                let bomb = cc.instantiate(this.bombPrefab); // create node instance
+                this.bombPool.put(bomb); // populate your pool with put method
+            }
+            var interval = 1.5;
+    
+            this.schedule(function() {
+                this.spawnNewBomb();
+            }, interval, this.bombPool.size(), 3);
+
+
+            //STONE
+            
+            let initCountStone = 0;
+            for (let i = 0; i < initCountStone; ++i) {
+                let stone = cc.instantiate(this.stonePrefab); // create node instance
+                this.stonePool.put(stone); // populate your pool with put method
+            }
+            var interval = 1.5;
+
+            this.schedule(function() {
+                this.spawnNewStone();
+            }, interval, this.stonePool.size(), 6.75);
+
+
+
+        
+        }, infiniteinterval, infiniterepeat, infinitedelay);
+
+
+
+
+
+
+                // Time interval in units of seconds
+        var infiniterow2interval = 14.5;
+        // Time of repetition
+        var infiniterow2repeat = 100;
+        // Start delay
+        var infiniterow2delay = 14.5;
+        this.schedule(function() {
+
+                // spawning yellow row 2
+
+        let initCountAppleRow2 = 1;
+        for (let i = 0; i < initCountAppleRow2; ++i) {
+            let apple3 = cc.instantiate(this.applePrefab); // create node instance
+            this.applePool3.put(apple3); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 1, 0);
+
+        let initCountAppleRow21 = 0;
+        for (let i = 0; i < initCountAppleRow21; ++i) {
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 0, 5.25);
+
+        let initCountAppleRow22 = 0;
+        for (let i = 0; i < initCountAppleRow22; ++i) {
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 0, 7.5);
+
+
+        let initCountAppleRow23 = 0;
+        for (let i = 0; i < initCountAppleRow23; ++i) {
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 1, 10.5);
+
+
+        let initCountAppleRow24 = 0;
+        for (let i = 0; i < initCountAppleRow24; ++i) {
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 0, 13.5);
+
+        // spawning water row 2
+
+        let initCountWaterRow2 = 1;
+        for (let i = 0; i < initCountWaterRow2; ++i) {
         }
         // Time interval in units of seconds
         var interval = 1.5;
         // Start delay
         this.schedule(function() {
             // Here `this` is referring to the component
-            this.spawnNewWater();
-        }, interval, this.waterPool.size(), 2.25);
+            this.spawnNewWater3();
+        }, interval, 1, 2.25);
+
+
+        for (let i = 0; i < initCountWaterRow2; ++i) {
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater3();
+        }, interval, 1, 6.75);
+
+        for (let i = 0; i < initCountWaterRow2; ++i) {
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater3();
+        }, interval, 0, 12);
+
+        // spawning orange row 2
+
+        let initCountOrangeRow21 = 0;
+        for (let i = 0; i < initCountOrangeRow21; ++i) {
+
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewOrange3();
+        }, interval, 0, 4.5);
+
+        let initCountOrangeRow22 = 0;
+        for (let i = 0; i < initCountOrangeRow22; ++i) {
+
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewOrange3();
+        }, interval, 1, 9);
+
+        let initCountOrangeRow23 = 0;
+        for (let i = 0; i < initCountOrangeRow23; ++i) {
+
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewOrange3();
+        }, interval, 0, 15);
+
+
+        
+        // Spawning bomb row 2
+
+        let initCountBomb2 = 0;
+        for (let i = 0; i < initCountBomb2; ++i) {
+
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewBomb2();
+        }, interval, 0, 6);
+
+        let initCountBomb3 = 0;
+        for (let i = 0; i < initCountBomb3; ++i) {
+
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewBomb2();
+        }, interval, 1, 12.75);
+
+
+        }, infiniterow2interval, infiniterow2repeat, infiniterow2delay);
+
+
+
+        // spawning yellow row 2
+
+        let initCountAppleRow2 = 1;
+        for (let i = 0; i < initCountAppleRow2; ++i) {
+            let apple3 = cc.instantiate(this.applePrefab); // create node instance
+            this.applePool3.put(apple3); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 1, 0);
+
+        let initCountAppleRow21 = 0;
+        for (let i = 0; i < initCountAppleRow21; ++i) {
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 0, 5.25);
+
+        let initCountAppleRow22 = 0;
+        for (let i = 0; i < initCountAppleRow22; ++i) {
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 0, 7.5);
+
+
+        let initCountAppleRow23 = 0;
+        for (let i = 0; i < initCountAppleRow23; ++i) {
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 1, 10.5);
+
+
+        let initCountAppleRow24 = 0;
+        for (let i = 0; i < initCountAppleRow24; ++i) {
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewApple3();
+        }, interval, 0, 13.5);
+
+        // spawning water row 2
+
+        let initCountWaterRow2 = 1;
+        for (let i = 0; i < initCountWaterRow2; ++i) {
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater3();
+        }, interval, 1, 2.25);
+
+
+        for (let i = 0; i < initCountWaterRow2; ++i) {
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater3();
+        }, interval, 1, 6.75);
+
+        for (let i = 0; i < initCountWaterRow2; ++i) {
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater3();
+        }, interval, 0, 12);
+
+        // spawning orange row 2
+
+        let initCountOrangeRow21 = 0;
+        for (let i = 0; i < initCountOrangeRow21; ++i) {
+
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewOrange3();
+        }, interval, this.orangePool.size(), 4.5);
+
+        let initCountOrangeRow22 = 0;
+        for (let i = 0; i < initCountOrangeRow22; ++i) {
+
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewOrange3();
+        }, interval, 1, 9);
+
+        let initCountOrangeRow23 = 0;
+        for (let i = 0; i < initCountOrangeRow23; ++i) {
+
+        }
+        var interval = 0.75;
+
+        this.schedule(function() {
+            this.spawnNewOrange3();
+        }, interval, 0, 15);
+
+
+        
+        // Spawning bomb row 2
+
+        let initCountBomb2 = 0;
+        for (let i = 0; i < initCountBomb2; ++i) {
+
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewBomb2();
+        }, interval, 0, 6);
+
+        let initCountBomb3 = 0;
+        for (let i = 0; i < initCountBomb3; ++i) {
+
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewBomb2();
+        }, interval, 1, 12.75);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         // spawning water dynamically row 3
+        let initCount = 0;
+        for (let i = 0; i < initCount; ++i) {
+            let water2 = cc.instantiate(this.waterPrefab); // create node instance
+            this.waterPool2.put(water2); // populate your pool with put method
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater2();
+        }, interval, this.waterPool2.size(), 0);
+
         let initCount2 = 0;
         for (let i = 0; i < initCount2; ++i) {
             let water2 = cc.instantiate(this.waterPrefab); // create node instance
@@ -169,67 +630,30 @@ var Game = cc.Class({
         this.schedule(function() {
             // Here `this` is referring to the component
             this.spawnNewWater2();
-        }, interval, this.waterPool2.size(), 2.25);
+        }, interval, this.waterPool2.size(), 3.75);
 
 
-        
-        // // spawning green dynamically
-        // let initCountGreen = 2;
-        // for (let i = 0; i < initCountGreen; ++i) {
-        //     let green = cc.instantiate(this.greenPrefab); // create node instance
-        //     this.greenPool.put(green); // populate your pool with put method
-        // }
-        // // Time interval in units of seconds
-        // var interval = 1.5;
-        // // Start delay
+        let initCount3 = 0;
+        for (let i = 0; i < initCount3; ++i) {
+            let water2 = cc.instantiate(this.waterPrefab); // create node instance
+            this.waterPool2.put(water2); // populate your pool with put method
+        }
+        // Time interval in units of seconds
+        var interval = 1.5;
+        // Start delay
+        this.schedule(function() {
+            // Here `this` is referring to the component
+            this.spawnNewWater2();
+        }, interval, this.waterPool2.size(), 7.5);
 
-        // this.schedule(function() {
-        //     // Here `this` is referring to the component
-        //     this.spawnNewGreen();
-        // }, interval, this.greenPool.size(), 1.75);
+// //////////////////////////////////////////////////////////////////////////
 
-
-        // spawning Egg dynamically row 3
-        // let initCountEgg = 1;
-        // for (let i = 0; i < initCountEgg; ++i) {
-        //     let egg = cc.instantiate(this.eggPrefab); // create node instance
-        //     this.eggPool.put(egg); // populate your pool with put method
-        // }
-        // var interval = 1.5;
-
-        // this.schedule(function() {
-        //     this.spawnNewEgg();
-        // }, interval, this.eggPool.size(), 0);
-
-        // // spawning Egg dynamically row 3
-        // let initCountEgg2 = 0;
-        // for (let i = 0; i < initCountEgg2; ++i) {
-        //     let egg2 = cc.instantiate(this.eggPrefab); // create node instance
-        //     this.eggPool2.put(egg2); // populate your pool with put method
-        // }
-        // var interval = 1.5;
-
-        // this.schedule(function() {
-        //     this.spawnNewEgg();
-        // }, interval, this.eggPool2.size(), 4.5)
 
         // spawning Apple2 dynamically row 1
-        let initCountApple2 = 0;
-        for (let i = 0; i < initCountApple2; ++i) {
+        let initCountApple1 = 0;
+        for (let i = 0; i < initCountApple1; ++i) {
             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-            this.applePool2.put(apple2); // populate your pool with put method
-        }
-        var interval = 1.5;
-
-        this.schedule(function() {
-            this.spawnNewApple2();
-        }, interval, this.applePool2.size(), 3.35);
-
-        // spawning Apple dynamically row 2
-        let initCountApple = 1;
-        for (let i = 0; i < initCountApple; ++i) {
-            let apple = cc.instantiate(this.applePrefab); // create node instance
-            this.applePool.put(apple); // populate your pool with put method
+            this.applePool.put(apple2); // populate your pool with put method
         }
         var interval = 1.5;
 
@@ -237,75 +661,147 @@ var Game = cc.Class({
             this.spawnNewApple();
         }, interval, this.applePool.size(), 0);
 
-        // spawning Apple2 dynamically row 2
+        let initCountApple2 = 0;
+        for (let i = 0; i < initCountApple2; ++i) {
+            let apple2 = cc.instantiate(this.applePrefab); // create node instance
+            this.applePool.put(apple2); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewApple();
+        }, interval, this.applePool.size(), 3.75);
+
         let initCountApple3 = 0;
         for (let i = 0; i < initCountApple3; ++i) {
             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-            this.applePool2.put(apple2); // populate your pool with put method
+            this.applePool.put(apple2); // populate your pool with put method
         }
         var interval = 1.5;
 
         this.schedule(function() {
-            this.spawnNewApple3();
-        }, interval, this.applePool2.size(), 5.25);
+            this.spawnNewApple();
+        }, interval, this.applePool.size(), 5.25);
 
+ // ////////////////////////////////////////////////////////////////////////////////////////
 
         // spawning Apple2 dynamically row 3
-        let initCountApple4 = 1;
-        for (let i = 0; i < initCountApple4; ++i) {
-            let apple4 = cc.instantiate(this.applePrefab); // create node instance
-            this.applePool2.put(apple4); // populate your pool with put method
+        let initCountAppleRow3 = 1;
+        for (let i = 0; i < initCountAppleRow3; ++i) {
+            let apple = cc.instantiate(this.applePrefab); // create node instance
+            this.applePool2.put(apple); // populate your pool with put method
+        }
+        var interval = 2.25;
+
+        this.schedule(function() {
+            this.spawnNewApple2();
+        }, interval, this.applePool2.size(), 2.25);
+
+        let initCountAppleRow31 = 0;
+        for (let i = 0; i < initCountAppleRow31; ++i) {
+            let apple = cc.instantiate(this.applePrefab); // create node instance
+            this.applePool.put(apple); // populate your pool with put method
         }
         var interval = 1.5;
 
         this.schedule(function() {
-            this.spawnNewApple4();
-        }, interval, this.applePool2.size(), 3.75);
+            this.spawnNewApple2();
+        }, interval, this.applePool.size(), 5.25);
 
 
 
 
+// //////////////////////////////////////////////////////////////////////////////////
 
 
+        // spawning Orange2 dynamically row 1
+        let initCountOrange = 0;
+        for (let i = 0; i < initCountOrange; ++i) {
+            let orange2 = cc.instantiate(this.orangePrefab); // create node instance
+            this.orangePool.put(orange2); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewOrange();
+        }, interval, this.orangePool.size(), 2.25);
 
         // spawning Orange2 dynamically row 1
         let initCountOrange2 = 0;
         for (let i = 0; i < initCountOrange2; ++i) {
             let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-            this.orangePool2.put(orange2); // populate your pool with put method
+            this.orangePool.put(orange2); // populate your pool with put method
         }
         var interval = 1.5;
 
         this.schedule(function() {
-            this.spawnNewOrange2();
-        }, interval, this.orangePool2.size(), 1.75);
+            this.spawnNewOrange();
+        }, interval, this.orangePool.size(), 4.5);
 
-        // spawning Orange3 dynamically row 1
+        // spawning Orange2 dynamically row 1
         let initCountOrange3 = 0;
         for (let i = 0; i < initCountOrange3; ++i) {
             let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-            this.orangePool2.put(orange2); // populate your pool with put method
+            this.orangePool.put(orange2); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewOrange();
+        }, interval, this.orangePool.size(), 6.75);
+
+// //////////////////////////////////////////////////////////////////////////////////
+        // spawning Orange2 dynamically row 3
+        let initCountOrangeRow3 = 0;
+        for (let i = 0; i < initCountOrangeRow3; ++i) {
+            let orange2 = cc.instantiate(this.orangePrefab); // create node instance
+            this.orangePool.put(orange2); // populate your pool with put method
         }
         var interval = 1.5;
 
         this.schedule(function() {
             this.spawnNewOrange2();
-        }, interval, this.orangePool2.size(), 4.75);
+        }, interval, this.orangePool.size(), 6);
 
-        // spawning Orange3 dynamically row 2
-        let initCountOrange4 = 0;
-        for (let i = 0; i < initCountOrange4; ++i) {
-            let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-            this.orangePool2.put(orange2); // populate your pool with put method
+////////////////////////////////////////////////////////////////////////////////////////
+            
+        let initCountStone2 = 0;
+        for (let i = 0; i < initCountStone2; ++i) {
+            let stone = cc.instantiate(this.stonePrefab); // create node instance
+            this.stonePool2.put(stone); // populate your pool with put method
         }
         var interval = 1.5;
 
         this.schedule(function() {
-            this.spawnNewOrange3();
-        }, interval, this.orangePool2.size(), 4.5);
+            this.spawnNewStone2();
+        }, interval,this.stonePool2.size() , 3);
+
+        let initCountStone3 = 0;
+        for (let i = 0; i < initCountStone3; ++i) {
+            let stone = cc.instantiate(this.stonePrefab); // create node instance
+            this.stonePool2.put(stone); // populate your pool with put method
+        }
+        var interval = 1.5;
+
+        this.schedule(function() {
+            this.spawnNewStone2();
+        }, interval, 0 , 6);
 
 
 
+
+
+
+        
+
+
+
+
+
+
+    },
+
+    start: function () {
 
     },
 
@@ -373,6 +869,33 @@ var Game = cc.Class({
         return cc.v2(randX, randY);
     },
 
+    spawnNewWater3: function() {
+        // generate a new node in the scene with a preset template
+        var newWater2 = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.waterPool2.size() > 0) {
+                console.log(this.waterPool2.size()+" What is the pool size")
+                newWater2 = this.waterPool2.get(); // this will be passed to Star's reuse method
+
+        } else {
+            newWater2 = cc.instantiate(this.waterPrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newWater2);
+        // set up a random position for the star
+        newWater2.setPosition(this.getNewWaterPosition3());
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
+    },
+
+    getNewWaterPosition3: function () {
+        var randX = -320;
+        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+        var randY = 209
+        // return to the anchor point of the star
+        return cc.v2(randX, randY);
+    },
+
     spawnNewGreen: function() {
         // generate a new node in the scene with a preset template
         var newGreen = null;
@@ -427,32 +950,59 @@ var Game = cc.Class({
         return cc.v2(randX, randY);
     },
 
-    spawnNewEgg: function() {
+    spawnNewBomb2: function() {
         // generate a new node in the scene with a preset template
-        var newEgg = null;
+        var newBomb = null;
         // 使用给定的模板在场景中生成一个新节点
-        if (this.eggPool.size() > 0) {
-                console.log(this.eggPool.size()+" What is the pool size")
-                newEgg = this.eggPool.get(); // this will be passed to Star's reuse method
+        if (this.bombPool.size() > 0) {
+                console.log(this.bombPool.size()+" What is the pool size")
+                newBomb = this.bombPool.get(); // this will be passed to Star's reuse method
 
         } else {
-            newEgg = cc.instantiate(this.eggPrefab);
+            newBomb = cc.instantiate(this.bombPrefab);
         }
         // put the newly added node under the Canvas node
-        this.node.addChild(newEgg);
+        this.node.addChild(newBomb);
         // set up a random position for the star
-        newEgg.setPosition(this.getNewEggPosition());
+        newBomb.setPosition(this.getNewBombPosition2());
         // pass Game instance to star
         // newWater.getComponent('Star').init(this);
     },
 
-    getNewEggPosition: function () {
-        var randX = 300;
+    getNewBombPosition2: function () {
+        var randX = -320;
         // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
-        var randY = 309
+        var randY = 209
         // return to the anchor point of the star
         return cc.v2(randX, randY);
     },
+
+    // spawnNewEgg: function() {
+    //     // generate a new node in the scene with a preset template
+    //     var newEgg = null;
+    //     // 使用给定的模板在场景中生成一个新节点
+    //     if (this.eggPool.size() > 0) {
+    //             console.log(this.eggPool.size()+" What is the pool size")
+    //             newEgg = this.eggPool.get(); // this will be passed to Star's reuse method
+
+    //     } else {
+    //         newEgg = cc.instantiate(this.eggPrefab);
+    //     }
+    //     // put the newly added node under the Canvas node
+    //     this.node.addChild(newEgg);
+    //     // set up a random position for the star
+    //     newEgg.setPosition(this.getNewEggPosition());
+    //     // pass Game instance to star
+    //     // newWater.getComponent('Star').init(this);
+    // },
+
+    // getNewEggPosition: function () {
+    //     var randX = 300;
+    //     // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+    //     var randY = 309
+    //     // return to the anchor point of the star
+    //     return cc.v2(randX, randY);
+    // },
 
     spawnNewApple: function() {
         // generate a new node in the scene with a preset template
@@ -475,31 +1025,6 @@ var Game = cc.Class({
     },
 
     getNewApplePosition: function () {
-        var randX = -320;
-        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
-        var randY = 209
-        // return to the anchor point of the star
-        return cc.v2(randX, randY);
-    },
-
-    spawnNewApple2: function() {
-        // generate a new node in the scene with a preset template
-        var newApple2 = null;
-        // 使用给定的模板在场景中生成一个新节点
-        if (this.applePool2.size() > 0) {
-                console.log(this.applePool2.size()+" What is the pool size")
-                newApple2 = this.applePool2.get(); // this will be passed to Star's reuse method
-
-        } else {
-            newApple2 = cc.instantiate(this.applePrefab);
-        }
-        this.node.addChild(newApple2);
-        newApple2.setPosition(this.getNewApplePosition2());
-        console.log(newApple2.getPosition())
-
-    },
-
-    getNewApplePosition2: function () {
         var randX = 300;
         // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
         var randY = 105
@@ -507,21 +1032,53 @@ var Game = cc.Class({
         return cc.v2(randX, randY);
     },
 
-    spawnNewApple3: function() {
+
+    spawnNewApple2: function() {
         // generate a new node in the scene with a preset template
         var newApple2 = null;
         // 使用给定的模板在场景中生成一个新节点
-        if (this.applePool2.size() > 0) {
-                console.log(this.applePool2.size()+" What is the pool size")
-                newApple2 = this.applePool2.get(); // this will be passed to Star's reuse method
+        if (this.applePool.size() > 0) {
+                console.log(this.applePool.size()+" What is the pool size")
+                newApple = this.applePool.get(); // this will be passed to Star's reuse method
 
         } else {
             newApple2 = cc.instantiate(this.applePrefab);
         }
+        // put the newly added node under the Canvas node
         this.node.addChild(newApple2);
-        newApple2.setPosition(this.getNewApplePosition3());
-        console.log(newApple2.getPosition())
+        // set up a random position for the star
+        newApple2.setPosition(this.getNewApplePosition2());
+        console.log("New position")
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
+    },
 
+    getNewApplePosition2: function () {
+        var randX = 300;
+        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+        var randY = 309
+        // return to the anchor point of the star
+        return cc.v2(randX, randY);
+    },
+
+    spawnNewApple3: function() {
+        // generate a new node in the scene with a preset template
+        var newApple3 = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.applePool.size() > 0) {
+                console.log(this.applePool.size()+" What is the pool size")
+                newApple3 = this.applePool.get(); // this will be passed to Star's reuse method
+
+        } else {
+            newApple3 = cc.instantiate(this.applePrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newApple3);
+        // set up a random position for the star
+        newApple3.setPosition(this.getNewApplePosition3());
+        console.log("New position")
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
     },
 
     getNewApplePosition3: function () {
@@ -532,29 +1089,6 @@ var Game = cc.Class({
         return cc.v2(randX, randY);
     },
 
-    spawnNewApple4: function() {
-        // generate a new node in the scene with a preset template
-        var newApple4 = null;
-        // 使用给定的模板在场景中生成一个新节点
-        if (this.applePool2.size() > 0) {
-                console.log(this.applePool.size()+" What is the pool size")
-                newApple4 = this.applePool.get(); // this will be passed to Star's reuse method
-
-        } else {
-            newApple4 = cc.instantiate(this.applePrefab);
-        }
-        this.node.addChild(newApple4);
-        newApple4.setPosition(this.getNewApplePosition4());
-
-    },
-
-    getNewApplePosition4: function () {
-        var randX = 300;
-        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
-        var randY = 309
-        // return to the anchor point of the star
-        return cc.v2(randX, randY);
-    },
 
 
     spawnNewOrange: function() {
@@ -577,33 +1111,6 @@ var Game = cc.Class({
     },
 
     getNewOrangePosition: function () {
-        var randX =  284;
-        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
-        var randY = 305
-        // return to the anchor point of the star
-        return cc.v2(randX, randY);
-    },
-
-    spawnNewOrange2: function() {
-        // generate a new node in the scene with a preset template
-        var newOrange2 = null;
-        // 使用给定的模板在场景中生成一个新节点
-        if (this.orangePool2.size() > 0) {
-                console.log(this.orangePool2.size()+" What is the pool size")
-                newOrange2 = this.orangePool2.get(); // this will be passed to Star's reuse method
-
-        } else {
-            newOrange2 = cc.instantiate(this.orangePrefab);
-        }
-        // put the newly added node under the Canvas node
-        this.node.addChild(newOrange2);
-        // set up a random position for the star
-        newOrange2.setPosition(this.getNewOrangePosition2());
-        // pass Game instance to star
-        // newWater.getComponent('Star').init(this);
-    },
-
-    getNewOrangePosition2: function () {
         var randX =  300;
         // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
         var randY = 105
@@ -611,33 +1118,113 @@ var Game = cc.Class({
         return cc.v2(randX, randY);
     },
 
-    spawnNewOrange3: function() {
-    // generate a new node in the scene with a preset template
-    var newOrange3 = null;
-    // 使用给定的模板在场景中生成一个新节点
-    if (this.orangePool2.size() > 0) {
-            console.log(this.orangePool2.size()+" What is the pool size")
-            newOrange3 = this.orangePool2.get(); // this will be passed to Star's reuse method
+    spawnNewOrange2: function() {
+        // generate a new node in the scene with a preset template
+        var newOrange = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.orangePool.size() > 0) {
+                console.log(this.orangePool.size()+" What is the pool size")
+                newOrange = this.orangePool.get(); // this will be passed to Star's reuse method
 
-    } else {
-        newOrange3 = cc.instantiate(this.orangePrefab);
-    }
-    // put the newly added node under the Canvas node
-    this.node.addChild(newOrange3);
-    // set up a random position for the star
-    newOrange3.setPosition(this.getNewOrangePosition3());
-    // pass Game instance to star
-    // newWater.getComponent('Star').init(this);
+        } else {
+            newOrange = cc.instantiate(this.orangePrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newOrange);
+        // set up a random position for the star
+        newOrange.setPosition(this.getNewOrangePosition2());
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
+    },
+
+    getNewOrangePosition2: function () {
+        var randX =  300;
+        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+        var randY = 309
+        // return to the anchor point of the star
+        return cc.v2(randX, randY);
+    },
+
+    spawnNewOrange3: function() {
+        // generate a new node in the scene with a preset template
+        var newOrange = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.orangePool.size() > 0) {
+                console.log(this.orangePool.size()+" What is the pool size")
+                newOrange = this.orangePool.get(); // this will be passed to Star's reuse method
+
+        } else {
+            newOrange = cc.instantiate(this.orangePrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newOrange);
+        // set up a random position for the star
+        newOrange.setPosition(this.getNewOrangePosition3());
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
     },
 
     getNewOrangePosition3: function () {
-        var randX =  -320;
+        var randX = -320;
         // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
         var randY = 209
         // return to the anchor point of the star
         return cc.v2(randX, randY);
     },
 
+    spawnNewStone: function() {
+        // generate a new node in the scene with a preset template
+        var newStone = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.stonePool.size() > 0) {
+                console.log(this.stonePool.size()+" What is the pool size")
+                newStone = this.stonePool.get(); // this will be passed to Star's reuse method
+
+        } else {
+            newStone = cc.instantiate(this.stonePrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newStone);
+        // set up a random position for the star
+        newStone.setPosition(this.getNewStone());
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
+    },
+
+    getNewStone: function () {
+        var randX =  300;
+        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+        var randY = 309
+        // return to the anchor point of the star
+        return cc.v2(randX, randY);
+    },
+
+    spawnNewStone2: function() {
+        // generate a new node in the scene with a preset template
+        var newStone = null;
+        // 使用给定的模板在场景中生成一个新节点
+        if (this.stonePool2.size() > 0) {
+                console.log(this.stonePool2.size()+" What is the pool size")
+                newStone = this.stonePool2.get(); // this will be passed to Star's reuse method
+
+        } else {
+            newStone = cc.instantiate(this.stonePrefab);
+        }
+        // put the newly added node under the Canvas node
+        this.node.addChild(newStone);
+        // set up a random position for the star
+        newStone.setPosition(this.getNewStone2());
+        // pass Game instance to star
+        // newWater.getComponent('Star').init(this);
+    },
+
+    getNewStone2: function () {
+        var randX =  300;
+        // According to the position of the ground level and the main character's jump height, randomly obtain an anchor point of the star on the y axis
+        var randY = 105
+        // return to the anchor point of the star
+        return cc.v2(randX, randY);
+    },
 
 
 

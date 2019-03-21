@@ -24,27 +24,38 @@ cc.Class({
         restartLabel: {
             default: null,
             type: cc.Prefab
+        },
+        failAudio: {
+            default: null,
+            type: cc.AudioClip
         }
     },
 
     onCollisionEnter: function onCollisionEnter(other, self) {
-        Global.explosionAnimation = 2;
         this.node.destroy();
         Global.gameEnd = 1;
+        cc.audioEngine.playEffect(this.failAudio, false);
+        Global.firstnode = null;
+        Global.secondnode = null;
+        Global.thirdnode = null;
+        Global.arrayFood = [];
     },
 
-    onLoad: function onLoad() {
-
-        // cc.director.getCollisionManager().enabled = true;
-        // var actionBy = this.rotateFood();
-        // this.node.runAction(actionBy);
-
-
-        var moveleftway = this.moveFood();
-        this.node.runAction(moveleftway);
-    },
+    onLoad: function onLoad() {},
 
     moveFood: function moveFood() {
+
+        var moveleft = cc.moveBy(4, cc.v2(800, 0));
+        return cc.repeatForever(moveleft);
+    },
+
+    moveFoodMed: function moveFoodMed() {
+
+        var moveleft = cc.moveBy(3.5, cc.v2(800, 0));
+        return cc.repeatForever(moveleft);
+    },
+
+    moveFoodOpp: function moveFoodOpp() {
 
         var moveleft = cc.moveBy(4, cc.v2(-800, 0));
         return cc.repeatForever(moveleft);
@@ -52,6 +63,20 @@ cc.Class({
 
     start: function start() {
         this._timer = 0.0;
+
+        var pos2 = 0;
+        pos2 = this.node.getPosition();
+
+        if (pos2.y == 105) {
+            var moveleftway = this.moveFoodOpp();
+            this.node.runAction(moveleftway);
+        } else if (pos2.y == 309) {
+            var moveleftway = this.moveFoodOpp();
+            this.node.runAction(moveleftway);
+        } else {
+            var moverighttway = this.moveFoodMed();
+            this.node.runAction(moverighttway);
+        }
     },
 
     update: function update(dt) {
@@ -62,11 +87,14 @@ cc.Class({
             // console.log(pos + " finding position")
             if (Global.gameEnd == 1) {
                 this.stopMoveAt();
-            } else if (pos.x <= -600) {
+            } else if (pos.x > 2850 && pos.y == 209) {
                 // console.log(pos + "before reset position")
-                this.node.setPosition(300, pos.y);
+                this.node.destroy();
                 // console.log(this.node.getPosition()+ "after reset position")
 
+            } else if (pos.x <= -875 && pos.y == 309) {
+                // this.node.setPosition(600,pos.y)
+                this.node.destroy();
             }
         }
     },

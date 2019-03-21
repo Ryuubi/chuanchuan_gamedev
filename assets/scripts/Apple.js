@@ -21,6 +21,10 @@ cc.Class({
             default:null,
             type: cc.Prefab
         },
+        failAudio:{
+            default:null,
+            type: cc.AudioClip
+        }
 
     },
 
@@ -61,7 +65,6 @@ cc.Class({
 
         var pos2 = 0
         pos2 = this.node.getPosition();
-        console.log(pos2)
 
 
         if(pos2.y == 105){
@@ -90,27 +93,26 @@ cc.Class({
                 this.stopMoveAt();
             }
 
-            else if( pos.x > 600 && pos.y == 209){
+            else if( pos.x > 2850 && pos.y == 209){
                 // console.log(pos + "before reset position")
-                this.node.setPosition(-400,pos.y)
+                this.node.destroy()
                 // console.log(this.node.getPosition()+ "after reset position")
 
                 
             }
 
 
-            else if( pos.x <= -600 && pos.y == 105){
+            else if( pos.x <= -750 && pos.y == 105){
                 // console.log(pos + "before reset position")
-                this.node.setPosition(300,pos.y)
+                this.node.setPosition(450,pos.y)
                 // console.log(this.node.getPosition()+ "after reset position")
 
                 
             }
 
-            else if( pos.x <= -600 && pos.y == 309){
-                // console.log(pos + "before reset position")
-                this.node.setPosition(300,pos.y)
-                // console.log(this.node.getPosition()+ "after reset position")
+            else if( pos.x <= -875 && pos.y == 309){
+                this.node.destroy()
+                // this.node.setPosition(600,pos.y)
 
                 
             }
@@ -200,6 +202,7 @@ cc.Class({
                 console.log("Game over")
                 Global.arrayfood = [];
                 Global.gameEnd = 1
+                cc.audioEngine.playEffect(this.failAudio,false)
 
 
             }

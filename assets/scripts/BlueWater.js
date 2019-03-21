@@ -12,6 +12,10 @@ cc.Class({
             default: null,
             type: cc.AudioClip
         },
+        failAudio:{
+            default:null,
+            type: cc.AudioClip
+        }
 
     },
 
@@ -75,18 +79,17 @@ cc.Class({
                 this.stopMoveAt();
             }
 
-            else if( pos.x <= -600 && pos.y == 309){
-                // console.log(pos + "before reset position")
-                this.node.setPosition(300,pos.y)
-                // console.log(this.node.getPosition()+ "after reset position")
+            else if( pos.x <= -875 && pos.y == 309){
+                // this.node.setPosition(600,pos.y)
+                this.node.destroy()
 
                 
             }
 
 
-            else if( pos.x > 600 && pos.y == 209){
+            else if( pos.x > 2850 && pos.y == 209){
                 // console.log(pos + "before reset position")
-                this.node.setPosition(-400,pos.y)
+                this.node.destroy()
                 // console.log(this.node.getPosition()+ "after reset position")
 
                 
@@ -175,7 +178,7 @@ cc.Class({
                 console.log("Game over")
                 Global.arrayfood = []
                 Global.gameEnd = 1
-
+                cc.audioEngine.playEffect(this.failAudio,false)
 
 
             }

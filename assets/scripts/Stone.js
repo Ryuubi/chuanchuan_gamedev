@@ -4,10 +4,6 @@ cc.Class({
     extends: cc.Component,
     
     properties: {
-        spear: {
-            default: null,
-            type: Spear
-        },
     },
 
     start: function () {
@@ -26,9 +22,16 @@ cc.Class({
                 this.stopMoveAt();
             }
 
-            else if( pos.x <= -600){
+            else if( pos.x <= -875 && pos.y == 309){
+                // this.node.setPosition(550,pos.y)
+                this.node.destroy();
+
+                
+            }
+
+            else if( pos.x <= -750 && pos.y == 105){
                 // console.log(pos + "before reset position")
-                this.node.setPosition(300,pos.y)
+                this.node.setPosition(450,pos.y)
                 // console.log(this.node.getPosition()+ "after reset position")
 
                 
@@ -57,7 +60,7 @@ cc.Class({
 
     onCollisionEnter: function (other, self) {
         console.log('hit');
-        this.spear.stopMoveAt();
+        Global.stone = 1
 
         
     },
