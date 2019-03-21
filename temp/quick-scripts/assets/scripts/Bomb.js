@@ -33,12 +33,9 @@ cc.Class({
 
     onCollisionEnter: function onCollisionEnter(other, self) {
         this.node.destroy();
+
         Global.gameEnd = 1;
         cc.audioEngine.playEffect(this.failAudio, false);
-        Global.firstnode = null;
-        Global.secondnode = null;
-        Global.thirdnode = null;
-        Global.arrayFood = [];
     },
 
     onLoad: function onLoad() {},

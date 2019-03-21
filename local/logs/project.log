@@ -1,537 +1,205 @@
-2019-03-21T02:15:15.793Z - normal: Load ~/.CocosCreator/settings.json
-2019-03-21T02:15:16.952Z - normal: Initializing Asset Database
-2019-03-21T02:15:16.953Z - warn: Failed to parse C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\library\uuid-to-mtime.json: Unexpected token < in JSON at position 13751.
-2019-03-21T02:15:16.955Z - normal: checking language setting...
-2019-03-21T02:15:16.955Z - normal: Language: en
-2019-03-21T02:15:17.549Z - success: preview server running at http://localhost:7456
-2019-03-21T02:15:17.552Z - success: protocol editor-framework registered
-2019-03-21T02:15:17.552Z - success: protocol app registered
-2019-03-21T02:15:17.552Z - success: protocol theme registered
-2019-03-21T02:15:17.552Z - success: protocol packages registered
-2019-03-21T02:15:17.552Z - success: protocol uuid registerred
-2019-03-21T02:15:17.552Z - success: protocol db registerred
-2019-03-21T02:15:17.552Z - success: protocol thumbnail registerred
-2019-03-21T02:15:17.552Z - success: protocol unpack registerred
-2019-03-21T02:15:17.553Z - success: protocol disable-commonjs registerred
-2019-03-21T02:15:17.674Z - normal: connected!
-2019-03-21T02:15:17.677Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt
-2019-03-21T02:15:17.683Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt
-2019-03-21T02:15:18.252Z - normal: Initializing Cocos2d
-2019-03-21T02:15:18.843Z - normal: Initializing engine extends
-2019-03-21T02:15:18.858Z - success: asset-db-debugger loaded
-2019-03-21T02:15:18.860Z - success: code-editor loaded
-2019-03-21T02:15:18.860Z - success: color-picker loaded
-2019-03-21T02:15:18.931Z - success: fb-audience-network loaded
-2019-03-21T02:15:18.971Z - success: fb-live-stream loaded
-2019-03-21T02:15:18.974Z - success: google-play-instant loaded
-2019-03-21T02:15:18.977Z - success: huawei-runtime loaded
-2019-03-21T02:15:18.977Z - success: jsb-adapter loaded
-2019-03-21T02:15:18.980Z - success: oppo-runtime loaded
-2019-03-21T02:15:18.982Z - success: package-manager loaded
-2019-03-21T02:15:19.078Z - success: qqplay-adapter loaded
-2019-03-21T02:15:19.079Z - success: runtime-dev-tools loaded
-2019-03-21T02:15:19.082Z - success: sdkbox loaded
-2019-03-21T02:15:19.084Z - success: tester loaded
-2019-03-21T02:15:19.086Z - success: ui-grid loaded
-2019-03-21T02:15:19.087Z - success: ui-kit-preview-extra loaded
-2019-03-21T02:15:19.089Z - success: ui-kit-preview loaded
-2019-03-21T02:15:19.090Z - success: ui-kit loaded
-2019-03-21T02:15:19.091Z - success: ui-tree loaded
-2019-03-21T02:15:19.093Z - success: vivo-runtime loaded
-2019-03-21T02:15:19.094Z - success: weapp-adapter loaded
-2019-03-21T02:15:19.140Z - success: assets loaded
-2019-03-21T02:15:19.142Z - success: builder loaded
-2019-03-21T02:15:19.357Z - success: cocos-services loaded
-2019-03-21T02:15:19.360Z - success: console loaded
-2019-03-21T02:15:19.389Z - success: fb-instant-games loaded
-2019-03-21T02:15:19.391Z - success: google-instant-games loaded
-2019-03-21T02:15:19.396Z - success: hierarchy loaded
-2019-03-21T02:15:19.398Z - success: inspector loaded
-2019-03-21T02:15:19.399Z - success: keystore loaded
-2019-03-21T02:15:19.401Z - success: node-library loaded
-2019-03-21T02:15:19.402Z - success: package-asset loaded
-2019-03-21T02:15:19.403Z - success: preferences loaded
-2019-03-21T02:15:19.404Z - success: project-exporter loaded
-2019-03-21T02:15:19.405Z - success: project-importer loaded
-2019-03-21T02:15:19.407Z - success: project-settings loaded
-2019-03-21T02:15:19.409Z - success: scene loaded
-2019-03-21T02:15:19.410Z - success: simulator-debugger loaded
-2019-03-21T02:15:19.411Z - success: sprite-editor loaded
-2019-03-21T02:15:19.414Z - success: store loaded
-2019-03-21T02:15:19.416Z - success: timeline loaded
-2019-03-21T02:15:21.160Z - info: Cocos Services load base data!
-2019-03-21T02:15:21.870Z - normal: Loading packages
-2019-03-21T02:15:21.875Z - normal: Watching packages
-2019-03-21T02:15:22.254Z - normal: Run Application
-2019-03-21T02:28:07.089Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountApple2"
-  186 |         }, interval, this.applePool.size(), 0);
-  187 | 
-> 188 |         let initCountApple2 = 0;
-      |             ^
-  189 |         for (let i = 0; i < initCountApple2; ++i) {
-  190 |             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-  191 |             this.applePool.put(apple2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T02:28:23.009Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountApple2"
-  186 |         }, interval, this.applePool.size(), 0);
-  187 | 
-> 188 |         let initCountApple2 = 0;
-      |             ^
-  189 |         for (let i = 0; i < initCountApple2; ++i) {
-  190 |             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-  191 |             this.applePool.put(apple2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T02:28:26.919Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountApple2"
-  186 |         }, interval, this.applePool.size(), 0);
-  187 | 
-> 188 |         let initCountApple2 = 0;
-      |             ^
-  189 |         for (let i = 0; i < initCountApple2; ++i) {
-  190 |             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-  191 |             this.applePool.put(apple2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T02:29:54.799Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountOrange2"
-  216 | 
-  217 |         // spawning Orange2 dynamically row 1
-> 218 |         let initCountOrange2 = 0;
-      |             ^
-  219 |         for (let i = 0; i < initCountOrange2; ++i) {
-  220 |             let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-  221 |             this.orangePool.put(orange2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T02:34:48.806Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountOrange2"
-  239 | 
-  240 |         // spawning Orange2 dynamically row 1
-> 241 |         let initCountOrange2 = 0;
-      |             ^
-  242 |         for (let i = 0; i < initCountOrange2; ++i) {
-  243 |             let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-  244 |             this.orangePool.put(orange2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T02:47:13.384Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountApple3"
-  210 | 
-  211 |         // spawning Apple2 dynamically row 1
-> 212 |         let initCountApple3 = 0;
-      |             ^
-  213 |         for (let i = 0; i < initCountApple3; ++i) {
-  214 |             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-  215 |             this.applePool.put(apple2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T03:02:00.262Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCount2"
-  172 |         }, interval, this.waterPool2.size(), 0);
-  173 | 
-> 174 |         let initCount2 = 1;
-      |             ^
-  175 |         for (let i = 0; i < initCount2; ++i) {
-  176 |             let water2 = cc.instantiate(this.waterPrefab); // create node instance
-  177 |             this.waterPool2.put(water2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T03:07:26.162Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountAppleRow3"
-  235 |         }, interval, this.applePool2.size(), 2.25);
-  236 | 
-> 237 |         let initCountAppleRow3 = 1;
-      |             ^
-  238 |         for (let i = 0; i < initCountAppleRow3; ++i) {
-  239 |             let apple = cc.instantiate(this.applePrefab); // create node instance
-  240 |             this.applePool2.put(apple); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T03:14:20.183Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountOrange3"
-  290 | 
-  291 |         // spawning Orange2 dynamically row 1
-> 292 |         let initCountOrange3 = 0;
-      |             ^
-  293 |         for (let i = 0; i < initCountOrange3; ++i) {
-  294 |             let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-  295 |             this.orangePool.put(orange2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T03:21:28.242Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCount2"
-  186 | 
-  187 | 
-> 188 |         let initCount2 = 0;
-      |             ^
-  189 |         for (let i = 0; i < initCount2; ++i) {
-  190 |             let water2 = cc.instantiate(this.waterPrefab); // create node instance
-  191 |             this.waterPool2.put(water2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T03:32:55.364Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T07:54:48.186Z - normal: Load ~/.CocosCreator/settings.json
+2019-03-21T07:54:49.331Z - normal: Initializing Asset Database
+2019-03-21T07:54:49.333Z - normal: checking language setting...
+2019-03-21T07:54:49.333Z - normal: Language: en
+2019-03-21T07:54:49.870Z - success: preview server running at http://localhost:7456
+2019-03-21T07:54:49.872Z - success: protocol editor-framework registered
+2019-03-21T07:54:49.872Z - success: protocol app registered
+2019-03-21T07:54:49.872Z - success: protocol theme registered
+2019-03-21T07:54:49.872Z - success: protocol packages registered
+2019-03-21T07:54:49.872Z - success: protocol uuid registerred
+2019-03-21T07:54:49.872Z - success: protocol db registerred
+2019-03-21T07:54:49.872Z - success: protocol thumbnail registerred
+2019-03-21T07:54:49.872Z - success: protocol unpack registerred
+2019-03-21T07:54:49.872Z - success: protocol disable-commonjs registerred
+2019-03-21T07:54:49.987Z - normal: connected!
+2019-03-21T07:54:49.989Z - normal: Check project C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt
+2019-03-21T07:54:49.996Z - normal: Initializing project C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt
+2019-03-21T07:54:50.557Z - normal: Initializing Cocos2d
+2019-03-21T07:54:51.135Z - normal: Initializing engine extends
+2019-03-21T07:54:51.152Z - success: asset-db-debugger loaded
+2019-03-21T07:54:51.154Z - success: code-editor loaded
+2019-03-21T07:54:51.154Z - success: color-picker loaded
+2019-03-21T07:54:51.225Z - success: fb-audience-network loaded
+2019-03-21T07:54:51.266Z - success: fb-live-stream loaded
+2019-03-21T07:54:51.268Z - success: google-play-instant loaded
+2019-03-21T07:54:51.271Z - success: huawei-runtime loaded
+2019-03-21T07:54:51.272Z - success: jsb-adapter loaded
+2019-03-21T07:54:51.274Z - success: oppo-runtime loaded
+2019-03-21T07:54:51.277Z - success: package-manager loaded
+2019-03-21T07:54:51.371Z - success: qqplay-adapter loaded
+2019-03-21T07:54:51.373Z - success: runtime-dev-tools loaded
+2019-03-21T07:54:51.376Z - success: sdkbox loaded
+2019-03-21T07:54:51.379Z - success: tester loaded
+2019-03-21T07:54:51.380Z - success: ui-grid loaded
+2019-03-21T07:54:51.382Z - success: ui-kit-preview-extra loaded
+2019-03-21T07:54:51.383Z - success: ui-kit-preview loaded
+2019-03-21T07:54:51.385Z - success: ui-kit loaded
+2019-03-21T07:54:51.386Z - success: ui-tree loaded
+2019-03-21T07:54:51.388Z - success: vivo-runtime loaded
+2019-03-21T07:54:51.388Z - success: weapp-adapter loaded
+2019-03-21T07:54:51.434Z - success: assets loaded
+2019-03-21T07:54:51.435Z - success: builder loaded
+2019-03-21T07:54:51.648Z - success: cocos-services loaded
+2019-03-21T07:54:51.651Z - success: console loaded
+2019-03-21T07:54:51.679Z - success: fb-instant-games loaded
+2019-03-21T07:54:51.681Z - success: google-instant-games loaded
+2019-03-21T07:54:51.684Z - success: hierarchy loaded
+2019-03-21T07:54:51.686Z - success: inspector loaded
+2019-03-21T07:54:51.686Z - success: keystore loaded
+2019-03-21T07:54:51.689Z - success: node-library loaded
+2019-03-21T07:54:51.690Z - success: package-asset loaded
+2019-03-21T07:54:51.691Z - success: preferences loaded
+2019-03-21T07:54:51.692Z - success: project-exporter loaded
+2019-03-21T07:54:51.693Z - success: project-importer loaded
+2019-03-21T07:54:51.694Z - success: project-settings loaded
+2019-03-21T07:54:51.696Z - success: scene loaded
+2019-03-21T07:54:51.697Z - success: simulator-debugger loaded
+2019-03-21T07:54:51.698Z - success: sprite-editor loaded
+2019-03-21T07:54:51.701Z - success: store loaded
+2019-03-21T07:54:51.704Z - success: timeline loaded
+2019-03-21T07:54:54.235Z - normal: Loading packages
+2019-03-21T07:54:54.240Z - normal: Watching packages
+2019-03-21T07:54:54.652Z - normal: Run Application
+2019-03-21T07:55:00.205Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T03:34:01.299Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T07:55:11.355Z - normal: Start building with options : {
+  "actualPlatform": "web-mobile",
+  "android-instant": {
+    "REMOTE_SERVER_ROOT": "",
+    "host": "",
+    "pathPattern": "",
+    "recordPath": "",
+    "scheme": "https",
+    "skipRecord": false
+  },
+  "apiLevel": "",
+  "appABIs": [],
+  "buildPath": "C:\\Users\\Administrator\\Desktop\\project_base\\complete_project\\conveyorbeltupdated\\conveyorbelt\\build",
+  "debug": false,
+  "dest": "C:\\Users\\Administrator\\Desktop\\project_base\\complete_project\\conveyorbeltupdated\\conveyorbelt\\build\\web-mobile",
+  "embedWebDebugger": false,
+  "encryptJs": true,
+  "excludeScenes": [],
+  "excludedModules": [],
+  "fb-instant-games": {},
+  "includeSDKBox": false,
+  "inlineSpriteFrames": false,
+  "inlineSpriteFrames_native": true,
+  "md5Cache": false,
+  "mergeStartScene": false,
+  "optimizeHotUpdate": false,
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.conveyor belt",
+  "platform": "web-mobile",
+  "previewHeight": "720",
+  "previewWidth": "1280",
+  "qqplay": {
+    "REMOTE_SERVER_ROOT": "",
+    "orientation": "portrait",
+    "zip": false
+  },
+  "scenes": [
+    "5dcd99cb-77a4-4c95-a7d8-4b5b45295ae5"
+  ],
+  "sourceMaps": false,
+  "startScene": "5dcd99cb-77a4-4c95-a7d8-4b5b45295ae5",
+  "template": "link",
+  "title": "conveyorbelt",
+  "useDebugKeystore": true,
+  "vsVersion": "auto",
+  "webOrientation": "auto",
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait",
+    "subContext": ""
+  },
+  "xxteaKey": "76709b53-3bab-46",
+  "zipCompressJs": true,
+  "project": "C:\\Users\\Administrator\\Desktop\\project_base\\complete_project\\conveyorbeltupdated\\conveyorbelt",
+  "projectName": "conveyorbelt",
+  "debugBuildWorker": false
+}
+2019-03-21T07:55:11.361Z - normal: Building C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt
+2019-03-21T07:55:11.362Z - normal: Destination C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt\build\web-mobile
+2019-03-21T07:55:11.513Z - normal: Delete C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt\build\web-mobile\subpackages/**/*,C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt\build\web-mobile\**\*
+2019-03-21T07:55:13.779Z - normal: Start building assets
+2019-03-21T07:55:13.779Z - normal: Start spawn build-worker
+2019-03-21T07:55:14.348Z - normal: Finish spawn build-worker
+2019-03-21T07:55:14.348Z - normal: Start init build-worker
+2019-03-21T07:55:16.999Z - normal: Finish init build-worker
+2019-03-21T07:55:16.999Z - normal: Start build-assets in worker
+2019-03-21T07:55:17.266Z - warn: The referenced asset used in "db://assets/explosionParticles.prefab" is not found, it may have been deleted. Detailed information:
+Used by "cc.PrefabInfo"
+uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+2019-03-21T07:55:17.382Z - normal: Finish build-assets in worker
+2019-03-21T07:55:17.386Z - normal: Finish building assets
+2019-03-21T07:55:17.399Z - normal: Start building plugin scripts
+2019-03-21T07:55:17.411Z - normal: Generating main.js from C:\CocosCreator\resources\static\build-templates\shares\main.js
+2019-03-21T07:55:17.430Z - normal: Generating html from C:\CocosCreator\resources\static\build-templates\web-mobile\template\index.html
+2019-03-21T07:55:17.452Z - error: SyntaxError: Unexpected token  in JSON at position 173
+    at JSON.parse (<anonymous>)
+    at Object.l [as readJson] (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\panel\utils\utils.js:1:649)
+    at Object.readEnableService (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\panel\utils\serviceConfig.js:1:662)
+    at Object.execInstallNativePlatformScript (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\panel\utils\ccServices.js:1:2488)
+    at e (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\main.js:1:255)
+    at C:\CocosCreator\resources\app.asar\editor-framework\lib\share\polyfills.js:1:286
+    at Promise (<anonymous>)
+    at C:\CocosCreator\resources\app.asar\editor-framework\lib\share\polyfills.js:1:260
+    at C:\CocosCreator\resources\app.asar\editor\lib\builder\index.js:1:858
+    at <anonymous>
+    at then.e (C:\CocosCreator\resources\app.asar\editor\lib\builder\index.js:1:885)
+    at <anonymous>
+2019-03-21T07:55:17.453Z - error: Build Failed: SyntaxError: Unexpected token  in JSON at position 173
+    at JSON.parse (<anonymous>)
+    at Object.l [as readJson] (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\panel\utils\utils.js:1:649)
+    at Object.readEnableService (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\panel\utils\serviceConfig.js:1:662)
+    at Object.execInstallNativePlatformScript (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\panel\utils\ccServices.js:1:2488)
+    at e (C:\CocosCreator\resources\app.asar\editor\builtin\cocos-services\main.js:1:255)
+    at C:\CocosCreator\resources\app.asar\editor-framework\lib\share\polyfills.js:1:286
+    at Promise (<anonymous>)
+    at C:\CocosCreator\resources\app.asar\editor-framework\lib\share\polyfills.js:1:260
+    at C:\CocosCreator\resources\app.asar\editor\lib\builder\index.js:1:858
+    at <anonymous>
+    at r.waterfall.r (C:\CocosCreator\resources\app.asar\editor\lib\builder\index.js:1:3393)
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:696:30
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:167:37
+    at C:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:1209:30
+    at Gulp.doneCallback (C:\CocosCreator\resources\app.asar\editor\core\gulp-build.js:1:24012)
+    at Gulp.Orchestrator.stop (C:\CocosCreator\resources\app.asar\node_modules\orchestrator\index.js:150:9)
+    at C:\CocosCreator\resources\app.asar\node_modules\orchestrator\index.js:277:22
+    at finish (C:\CocosCreator\resources\app.asar\node_modules\orchestrator\lib\runTask.js:21:8)
+2019-03-21T07:58:11.194Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T03:34:15.606Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T07:59:37.239Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T03:34:22.680Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:00:41.824Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T03:35:14.962Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:02:33.440Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T03:49:54.226Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T03:50:37.038Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T03:51:14.236Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T03:54:36.051Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T03:55:37.019Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T03:58:43.581Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T03:59:29.121Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:01:09.561Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:01:30.866Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:02:06.393Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:02:33.114Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:03:10.570Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:03:19.541Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:03:40.681Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:04:07.764Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:04:35.678Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:04:47.462Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:05:11.853Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:06:39.335Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:07:02.504Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:07:44.991Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:08:41.557Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountAppleRow31"
-  226 | 
-  227 |     
-> 228 |             let initCountAppleRow31 = 0;
-      |                 ^
-  229 |             for (let i = 0; i < initCountAppleRow31; ++i) {
-  230 |                 let apple = cc.instantiate(this.applePrefab); // create node instance
-  231 |                 this.applePool.put(apple); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T04:08:51.790Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:09:33.473Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:11:05.979Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:11:30.800Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T04:12:00.105Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:30:43.246Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:31:13.460Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:31:37.824Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:32:13.311Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:32:24.609Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:33:10.304Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:33:45.153Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:34:09.363Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:34:34.123Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:35:09.903Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:35:19.375Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:38:01.746Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:38:19.962Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:39:04.153Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:40:33.536Z - error: Reference "spear" of "Stone<Stone>" to external scene object "btn_play" can not be saved in prefab asset.
-    at C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:3768
-    at r (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:3483)
-    at i (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:3532)
-    at C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:3553
-    at f (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:781)
-    at Object.c.getDumpableNode (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:3216)
-    at Object.c.createPrefabFrom (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\utils\prefab.js:1:4069)
-    at Object.createPrefab (C:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:5363)
-    at HTMLElement.create-prefab (C:\CocosCreator\resources\app.asar\editor\builtin\scene\panel\messages\scene-operation.js:1:2681)
-2019-03-21T05:43:24.762Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:43:31.210Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:46:14.134Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:46:26.535Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:47:03.102Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:47:33.526Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:48:15.980Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:49:26.925Z - failed: load script [Game] failed : Error: Cannot find module 'Game'
+2019-03-21T08:03:23.529Z - failed: load script [Game] failed : Error: Cannot find module 'Game'
     at Module._resolveFilename (module.js:470:15)
     at Function.Module._resolveFilename [as _resolveFilenameVendor] (C:\CocosCreator\resources\electron.asar\common\reset-search-paths.js:35:12)
     at Function.s._resolveFilename (C:\CocosCreator\resources\app.asar\editor\page\project-scripts.js:1:941)
@@ -539,721 +207,72 @@ Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
     at Module.require (module.js:498:17)
     at require (internal/module.js:20:19)
     at Object.cc.require (C:\CocosCreator\resources\app.asar\editor\page\project-scripts.js:1:589)
-    at C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\temp\quick-scripts\assets\scripts\Orange2.js:1:350
-    at __define (C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\temp\quick-scripts\assets\scripts\Orange2.js:16:12)
-    at C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\temp\quick-scripts\assets\scripts\Orange2.js:375:13
-2019-03-21T05:49:26.927Z - warn: The 'type' attribute of 'Orange2.game' is undefined when loading script
-2019-03-21T05:49:27.297Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:49:27.760Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:49:58.781Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:51:45.667Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:52:11.328Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:53:04.340Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:54:21.663Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:56:55.983Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:57:38.196Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:58:52.722Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountApple2"
-  369 |         }, interval, this.applePool.size(), 0);
-  370 | 
-> 371 |         let initCountApple2 = 0;
-      |             ^
-  372 |         for (let i = 0; i < initCountApple2; ++i) {
-  373 |             let apple2 = cc.instantiate(this.applePrefab); // create node instance
-  374 |             this.applePool.put(apple2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T05:58:53.404Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:59:06.877Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T05:59:49.110Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:01:52.353Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCount"
-  329 | 
-  330 |         // spawning water dynamically row 3
-> 331 |         let initCount = 0;
-      |             ^
-  332 |         for (let i = 0; i < initCount; ++i) {
-  333 |             let water2 = cc.instantiate(this.waterPrefab); // create node instance
-  334 |             this.waterPool2.put(water2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:02:10.290Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:03:57.780Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:04:32.294Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:04:38.671Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:05:25.891Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:06:27.140Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:08:12.862Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:08:24.684Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:08:51.622Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:09:41.655Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:11:02.228Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountOrangeRow3"
-  492 | // //////////////////////////////////////////////////////////////////////////////////
-  493 |         // spawning Orange2 dynamically row 3
-> 494 |         let initCountOrangeRow3 = 0;
-      |             ^
-  495 |         for (let i = 0; i < initCountOrangeRow3; ++i) {
-  496 |             let orange2 = cc.instantiate(this.orangePrefab); // create node instance
-  497 |             this.orangePool.put(orange2); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:11:12.418Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:11:35.561Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:12:25.584Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:12:50.656Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:13:26.081Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:13:43.442Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:14:13.040Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:15:02.624Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:15:51.788Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:16:40.266Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountAppleRow2"
-  298 |         }, interval, this.applePool3.size(), 0);
-  299 | 
-> 300 |         let initCountAppleRow2 = 1;
-      |             ^
-  301 |         for (let i = 0; i < initCountAppleRow2; ++i) {
-  302 |         }
-  303 |         var interval = 1.5;
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:16:54.502Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:17:12.840Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:17:33.008Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:17:53.138Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:19:01.656Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:20:47.076Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountBomb"
-  336 |         // Spawning bomb row 2
-  337 | 
-> 338 |         let initCountBomb = 0;
-      |             ^
-  339 |         for (let i = 0; i < initCountBomb; ++i) {
-  340 | 
-  341 |         }
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:20:54.673Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:22:23.689Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:22:43.751Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:24:03.621Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:24:48.115Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:25:43.630Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:26:46.719Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:27:13.724Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:27:53.624Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountAppleRow21"
-  307 |         }, interval, 0, 5.25);
-  308 | 
-> 309 |         let initCountAppleRow21 = 0;
-      |             ^
-  310 |         for (let i = 0; i < initCountAppleRow21; ++i) {
-  311 |         }
-  312 |         var interval = 1.5;
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:28:00.622Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:29:08.643Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountOrangeRow21"
-  352 |         }, interval, this.orangePool.size(), 4.5);
-  353 | 
-> 354 |         let initCountOrangeRow21 = 0;
-      |             ^
-  355 |         for (let i = 0; i < initCountOrangeRow21; ++i) {
-  356 | 
-  357 |         }
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:29:15.859Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:30:00.178Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:30:28.486Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:30:49.941Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:32:00.951Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountAppleRow22"
-  316 |         }, interval, 0, 7.5);
-  317 | 
-> 318 |         let initCountAppleRow22 = 0;
-      |             ^
-  319 |         for (let i = 0; i < initCountAppleRow22; ++i) {
-  320 |         }
-  321 |         var interval = 0.75;
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:32:07.181Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:32:26.177Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:35:35.245Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:36:12.842Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:37:54.550Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountAppleRow23"
-  327 | 
-  328 | 
-> 329 |         let initCountAppleRow23 = 0;
-      |             ^
-  330 |         for (let i = 0; i < initCountAppleRow23; ++i) {
-  331 |         }
-  332 |         var interval = 0.75;
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:38:02.139Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountBomb2"
-  406 |         }, interval, 0, 6);
-  407 | 
-> 408 |         let initCountBomb2 = 0;
-      |             ^
-  409 |         for (let i = 0; i < initCountBomb2; ++i) {
-  410 | 
-  411 |         }
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:39:06.331Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountBomb"
-  406 |         }, interval, 0, 6);
-  407 | 
-> 408 |         let initCountBomb = 0;
-      |             ^
-  409 |         for (let i = 0; i < initCountBomb; ++i) {
-  410 | 
-  411 |         }
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:39:15.167Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:39:19.225Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:40:05.433Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:40:46.945Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountOrangeRow22"
-  392 |         }, interval, 1, 9);
-  393 | 
-> 394 |         let initCountOrangeRow22 = 0;
-      |             ^
-  395 |         for (let i = 0; i < initCountOrangeRow22; ++i) {
-  396 | 
-  397 |         }
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:40:54.020Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:41:43.796Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:42:24.643Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:42:28.184Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:42:33.448Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:45:43.146Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:46:16.851Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:46:46.493Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:48:18.698Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:49:20.828Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:50:46.527Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:50:59.081Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:53:33.423Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountStone"
-  762 | ////////////////////////////////////////////////////////////////////////////////////////
-  763 |             
-> 764 |         let initCountStone = 0;
-      |             ^
-  765 |         for (let i = 0; i < initCountStone; ++i) {
-  766 |             let stone = cc.instantiate(this.stonePrefab); // create node instance
-  767 |             this.stonePool.put(stone); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:53:50.869Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:55:01.770Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:56:40.221Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:57:16.849Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:58:29.370Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountStone2"
-  775 | 
-  776 | 
-> 777 |         let initCountStone2 = 0;
-      |             ^
-  778 |         for (let i = 0; i < initCountStone2; ++i) {
-  779 |             let stone = cc.instantiate(this.stonePrefab); // create node instance
-  780 |             this.stonePool2.put(stone); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T06:58:36.331Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:59:13.842Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:59:25.668Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T06:59:54.616Z - failed: [db-task][sync-changes] Failed to import asset C:\Users\Administrator\Desktop\project_base\complete_project\conveyor beltupdated\conveyor belt\assets\scripts\Game.js, message: Compile error: TypeError: C:/Users/Administrator/Desktop/project_base/complete_project/conveyor beltupdated/conveyor belt/assets/scripts/Game.js: Duplicate declaration "initCountStone2"
-  774 |         }, interval,this.stonePool2.size() , 3);
-  775 | 
-> 776 |         let initCountStone2 = 0;
-      |             ^
-  777 |         for (let i = 0; i < initCountStone2; ++i) {
-  778 |             let stone = cc.instantiate(this.stonePrefab); // create node instance
-  779 |             this.stonePool2.put(stone); // populate your pool with put method
-    at File.buildCodeFrameError (C:\CocosCreator\resources\app.asar\node_modules\babel-core\lib\transformation\file\index.js:431:15)
-    at Scope.checkBlockScopedCollisions (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:398:27)
-    at Scope.registerBinding (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:592:16)
-    at Scope.registerDeclaration (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:496:14)
-    at Object.BlockScoped (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\scope\index.js:244:28)
-    at Object.newFn (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\visitors.js:318:17)
-    at NodePath._call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:76:18)
-    at NodePath.call (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:44:14)
-    at NodePath.visit (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\path\context.js:105:12)
-    at TraversalContext.visitQueue (C:\CocosCreator\resources\app.asar\node_modules\babel-traverse\lib\context.js:150:16)
-2019-03-21T07:00:03.379Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
-
-2019-03-21T07:00:21.908Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
-Node path: "explosionParticles"
-Asset url: "db://assets/explosionParticles.prefab"
-Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
+    at C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt\temp\quick-scripts\assets\scripts\Orange2.js:1:350
+    at __define (C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt\temp\quick-scripts\assets\scripts\Orange2.js:16:12)
+    at C:\Users\Administrator\Desktop\project_base\complete_project\conveyorbeltupdated\conveyorbelt\temp\quick-scripts\assets\scripts\Orange2.js:380:13
+2019-03-21T08:03:23.530Z - warn: The 'type' attribute of 'Orange2.game' is undefined when loading script
+2019-03-21T08:03:23.715Z - warn: Script attached to "Bomb" in prefab "Bomb.prefab" is missing or invalid. Detailed information:
+Node path: "Bomb"
+Asset url: "db://assets/Bomb.prefab"
+Script UUID: "b2ea3070-c506-4a09-aa83-cc4e06612c19"
+Class ID: "b2ea3BwxQZKCaqDzE4GYSwZ"
 
-2019-03-21T07:00:26.082Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:03:23.877Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:01:32.028Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:03:24.429Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:03:30.303Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:03:25.383Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:04:21.216Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:04:47.753Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:04:57.304Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:05:35.713Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:12:49.352Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:11:44.428Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:13:35.382Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:12:11.116Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:13:52.793Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:13:07.949Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:17:12.282Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:14:50.977Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:17:16.933Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:17:10.302Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:25:08.218Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:18:53.459Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"
 
-2019-03-21T07:31:38.701Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
+2019-03-21T08:19:43.271Z - warn: The Asset used by node "explosionParticles" in prefab "explosionParticles.prefab" is missing. Detailed information:
 Node path: "explosionParticles"
 Asset url: "db://assets/explosionParticles.prefab"
 Missing uuid: "4bbb13ee-b4bc-46e5-a0a6-1a797d2bd06d"

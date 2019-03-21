@@ -2,6 +2,31 @@
 const Player = require('Player');
 const Water = require('BlueWater');
 const Spear = require('Spear');
+
+
+window.Global={
+    count: 0 ,
+    reset: 0,
+    arrayfood: [],
+    arrayNode: [],
+    first:null,
+    second:null,
+    third:null,
+    firstnode:null,
+    secondnode:null,
+    thirdnode:null,
+    replacementcount:0,
+    gameover:0,
+    parentSpear:null,
+    position:null,
+    animation:1, 
+    gameEnd:0,
+    stone:0,
+    
+    
+}
+
+
 var Game = cc.Class({
     extends: cc.Component,
 
@@ -50,9 +75,19 @@ var Game = cc.Class({
 
     onLoad: function () {
 
-        Global.gameEnd = 0
+        Global.gameEnd = 0;
+        Global.arrayfood.length = 0
+        Global.arrayNode.length = 0
+
+        Global.firstnode = null;
+        Global.secondnode = null;
+        Global.thirdnode = null;
+
         this.restartBtn.active = false;
         this.restartLabel.active = false;
+        console.log(Global.arrayFood+"Is the array empty")
+
+        
 
         this.node.on(cc.Node.EventType.TOUCH_START, () => { 
             console.log("TOUCH_START")
@@ -107,6 +142,7 @@ var Game = cc.Class({
 
         this.stonePool = new cc.NodePool('Stone');
         this.stonePool2 = new cc.NodePool('Stone2');
+
 
         // spawning Bomb dynamically row 3
         let initCountBomb = 0;
@@ -800,9 +836,24 @@ var Game = cc.Class({
 
     start: function () {
 
+        var musicinterval = 1;
+        // // Time of repetition
+        var musicrepeat = 0;
+        // // Start delay
+        var musicdelay = 0;
+        this.schedule(function() {
+        // Here `this` is referring to the component
+        this.playMusic();
+        console.log("test music")
+        }, musicinterval, musicrepeat, musicdelay);
     },
 
     restartGame:function(){
+        // Global.firstnode = null;
+        // Global.secondnode = null;
+        // Global.thirdnode = null;
+        // Global.arrayFood = [];
+        // Global.arrayNode = [];
         cc.game.restart();
     },
 
@@ -1251,9 +1302,15 @@ var Game = cc.Class({
         this.btnNode.x = 3000;
         this.GameOver.active = false;
 
+        
+
 
         
     },
+
+    start: function () {
+
+      },
 
     update: function (dt) {
         this._timer += dt;
